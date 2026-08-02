@@ -1852,7 +1852,11 @@ html {
                                         border-radius: 12px;
                                         mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
                                         -webkit-mask-image: linear-gradient(to right, transparent, #000 15%, #000 85%, transparent);
-                                        margin: 6.5rem 0 2rem 0;
+                                        margin: 2rem 0;
+                                    }
+
+                                    .home_expertise-bg-img {
+                                        transform: translateY(-80px) !important;
                                     }
 
                                     .tech-marquee-track {
