@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 900 420"
+    fill="none">
+
+<defs>
+
+    <!-- ===========================
+         COLORS
+    ============================ -->
+
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#0A0D10"/>
+        <stop offset="55%" stop-color="#050709"/>
+        <stop offset="100%" stop-color="#0B1115"/>
+    </linearGradient>
+
+    <radialGradient id="light"
+        cx="0"
+        cy="0"
+        r="1"
+        gradientUnits="userSpaceOnUse"
+        gradientTransform="translate(820 28) rotate(135) scale(420)">
+
+        <stop offset="0%" stop-color="#34D8FF" stop-opacity=".10"/>
+        <stop offset="100%" stop-color="#34D8FF" stop-opacity="0"/>
+
+    </radialGradient>
+
+    <pattern
+        id="dots"
+        width="12"
+        height="12"
+        patternUnits="userSpaceOnUse">
+
+        <circle
+            cx="1"
+            cy="1"
+            r=".65"
+            fill="#29CFFF"
+            opacity=".18"/>
+
+    </pattern>
+
+</defs>
+
+<!-- ===================================================== -->
+
+<rect
+    width="900"
+    height="420"
+    rx="18"
+    fill="url(#bg)"/>
+
+<rect
+    width="900"
+    height="420"
+    rx="18"
+    fill="url(#light)"/>
+
+<!-- ===================================================== -->
+<!-- OUTER FRAME -->
+<!-- ===================================================== -->
+
+<rect
+    x="1"
+    y="1"
+    width="898"
+    height="418"
+    rx="18"
+    stroke="#2FE0FF"
+    stroke-width="1"/>
+
+<rect
+    x="7"
+    y="7"
+    width="886"
+    height="406"
+    rx="14"
+    stroke="#27343B"
+    stroke-width=".8"/>
+
+<!-- ===================================================== -->
+<!-- TOP BAR -->
+<!-- ===================================================== -->
+
+<path
+d="
+M14 14
+H250
+
+L264 26
+
+H636
+
+L650 14
+
+H886
+"
+stroke="#63F5D2"
+stroke-width="5"
+stroke-linecap="square"
+stroke-linejoin="miter"/>
+
+<!-- notch outline -->
+
+<path
+d="
+M250 14
+L264 26
+
+H636
+
+L650 14
+"
+stroke="#11181C"
+stroke-width="2"
+fill="none"/>
+
+<!-- ===================================================== -->
+<!-- HEADER PANEL -->
+<!-- ===================================================== -->
+
+<rect
+    x="18"
+    y="42"
+    width="864"
+    height="70"
+    stroke="#3B4448"
+    stroke-width=".8"/>
+
+<!-- divider -->
+
+<line
+    x1="430"
+    y1="42"
+    x2="430"
+    y2="112"
+    stroke="#3B4448"
+    stroke-width=".8"/>
+
+<!-- cyan divider -->
+
+<rect
+    x="427"
+    y="61"
+    width="4"
+    height="32"
+    fill="#4CF7D5"/>
+
+<!-- ===================================================== -->
+<!-- BODY PANEL -->
+<!-- ===================================================== -->
+
+<rect
+    x="18"
+    y="124"
+    width="864"
+    height="278"
+    stroke="#3B4448"
+    stroke-width=".8"/>
+
+<!-- ===================================================== -->
+<!-- PHOTO FRAME -->
+<!-- ===================================================== -->
+
+<rect
+    x="34"
+    y="140"
+    width="215"
+    height="220"
+    stroke="#50585C"
+    stroke-width=".8"/>
+
+<!-- inner photo frame -->
+
+<rect
+    x="42"
+    y="148"
+    width="199"
+    height="204"
+    stroke="#3B4448"
+    stroke-width=".8"/>
+
+<!-- cyan accent -->
+
+<rect
+    x="28"
+    y="150"
+    width="5"
+    height="94"
+    fill="#4CF7D5"/>
+
+<!-- ===================================================== -->
+<!-- decorative dot matrix -->
+<!-- ===================================================== -->
+
+<rect
+    x="760"
+    y="18"
+    width="110"
+    height="40"
+    fill="url(#dots)"
+    opacity=".55"/>
+
+<!-- ===================================================== -->
+<!-- END PART 1 -->
+<!-- DO NOT CLOSE SVG YET -->

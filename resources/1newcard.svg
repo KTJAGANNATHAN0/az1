@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="313"
+    height="597"
+    viewBox="0 0 313 597"
+    fill="none">
+
+  <defs>
+
+    <linearGradient id="bg" x1="156.5" y1="0" x2="156.5" y2="597" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#070808"/>
+      <stop offset="55%" stop-color="#0C0E0D"/>
+      <stop offset="100%" stop-color="#1D4437"/>
+    </linearGradient>
+
+    <linearGradient id="accent" x1="0" y1="0" x2="313" y2="597">
+      <stop offset="0%" stop-color="#82FFD7"/>
+      <stop offset="100%" stop-color="#49D6A2"/>
+    </linearGradient>
+
+    <linearGradient id="glass" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.01"/>
+    </linearGradient>
+
+    <radialGradient id="bottomGlow" cx="50%" cy="100%" r="80%">
+      <stop offset="0%" stop-color="#63F3C0" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#63F3C0" stop-opacity="0"/>
+    </radialGradient>
+
+    <filter id="blurGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="32"/>
+    </filter>
+
+  </defs>
+
+  <!-- Background -->
+  <rect width="313" height="597" fill="url(#bg)"/>
+
+  <!-- Bottom glow -->
+  <ellipse
+      cx="156.5"
+      cy="560"
+      rx="170"
+      ry="150"
+      fill="url(#bottomGlow)"
+      filter="url(#blurGlow)"/>
+
+  <!-- Outer frame -->
+  <rect
+      x="2"
+      y="2"
+      width="309"
+      height="593"
+      rx="0"
+      fill="none"
+      stroke="url(#accent)"
+      stroke-width="2"/>
+
+  <!-- Inner frame -->
+  <rect
+      x="14"
+      y="14"
+      width="285"
+      height="569"
+      fill="url(#glass)"
+      stroke="#3B4C47"
+      stroke-opacity="0.35"
+      stroke-width="1"/>
+
+  <!-- Top HUD -->
+  <g transform="translate(14 14)">
+
+    <path
+      d="M0 0H90L104 14H70L58 26H0Z"
+      fill="#111616"
+      stroke="#2A3532"
+      stroke-width="1"/>
+
+    <rect
+      x="0"
+      y="5"
+      width="48"
+      height="5"
+      rx="2.5"
+      fill="#79FFD8"/>
+
+    <polygon
+      points="55,10 63,4 71,4 63,10"
+      fill="#79FFD8"/>
+
+    <polygon
+      points="70,10 78,4 86,4 78,10"
+      fill="#79FFD8"/>
+
+  </g>
+
+  <!-- Content begins here -->
+    <!-- HUD Corner Details -->
+
+  <g stroke="#7CFDD4" stroke-opacity="0.16" stroke-width="1">
+
+    <!-- Top Right -->
+    <path d="M258 28H286"/>
+    <path d="M286 28V56"/>
+
+    <!-- Bottom Left -->
+    <path d="M28 540V568"/>
+    <path d="M28 568H56"/>
+
+  </g>
+
+  <!-- Decorative Grid -->
+
+  <g opacity="0.05">
+
+    <path d="M28 310H285"/>
+    <path d="M28 360H285"/>
+    <path d="M28 410H285"/>
+
+    <path d="M110 260V560"/>
+    <path d="M200 260V560"/>
+
+  </g>
+
+ 
+</svg>

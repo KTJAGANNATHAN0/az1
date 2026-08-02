@@ -1,0 +1,949 @@
+/* lenis and cookie css */
+[data-cookie] {
+    visibility: hidden;
+}
+
+html.lenis,
+html.lenis body {
+    height: auto;
+}
+
+.lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+    overflow: clip;
+}
+
+.lenis.lenis-smooth iframe {
+    pointer-events: none;
+}
+
+/* gradient-text-on-hover */
+@media (min-width: 991px) {
+    .gradient-text-on-hover {
+        position: relative;
+        display: inline-block;
+        transition: color 0.3s ease-out;
+    }
+
+    .gradient-text-on-hover::before {
+        content: attr(data-text);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, #52B7FF 0%, #037BCF 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
+        z-index: 1;
+        transition: opacity 0.3s ease-out;
+    }
+
+    .faq_question:hover .gradient-text-on-hover::before {
+        opacity: 1;
+    }
+
+    .faq_question:hover .gradient-text-on-hover {
+        color: transparent;
+    }
+}
+
+/* global-styles */
+.main-wrapper {
+    overflow-x: clip;
+}
+
+:root {
+    accent-color: var(--primary);
+}
+
+textarea {
+    resize: vertical;
+}
+
+a {
+    text-underline-offset: 0.25rem;
+}
+
+.text-size-medium {
+    text-underline-offset: 2.25rem;
+}
+
+/* Remove blue box from links and dropdown on tap on mobile */
+html {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* Make text look crisper and more legible in all browsers */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+/* Fluid responsive */
+html {
+    font-size: calc(16*(100vw / 1600))
+}
+
+@media (max-width: 479px) {
+    html {
+        font-size: calc(16*(100vw / 360))
+    }
+}
+
+@media (min-width: 1728px) {
+    html {
+        font-size: 16px
+    }
+}
+
+/* Focus state style for keyboard navigation for the focusable elements */
+*[tabindex]:focus-visible,
+input[type="file"]:focus-visible {
+    outline: 0.125rem solid var(--primary);
+    outline-offset: 0.125rem;
+}
+
+/* Get rid of top margin on first element in any rich text element */
+.w-richtext> :not(div):first-child,
+.w-richtext>div:first-child> :first-child {
+    margin-top: 0 !important;
+}
+
+/* Get rid of bottom margin on last element in any rich text element */
+.w-richtext>:last-child,
+.w-richtext ol li:last-child,
+.w-richtext ul li:last-child {
+    margin-bottom: 0 !important;
+}
+
+/* 
+Make the following elements inherit typography styles from the parent and not have hardcoded values. 
+Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
+*/
+a,
+.w-input,
+.w-nav-link,
+.w-dropdown-btn,
+.w-dropdown-toggle,
+.w-dropdown-link {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+/* Apply "..." after 3 lines of text */
+[text-3lines] {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+/* Apply "..." after 4 lines of text */
+[text-4lines] {
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+/* Hide Scrollbar */
+[no-scrollbar]::-webkit-scrollbar {
+    display: none;
+}
+
+[no-scrollbar] {
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
+}
+
+/* navbar */
+.navbar {
+    transition: background 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.w-nav-overlay {
+    top: 0;
+}
+
+.footer-foursets-icon-wr:hover .footer-foursets-blur-wr {
+    opacity: 1;
+}
+
+.text-rich-text-14 li {
+    background-position: 0 0.4rem;
+}
+
+.home_sticky-content-bottom-wr:hover .is-home-popup-video {
+    color: var(--primary);
+}
+
+/* btn-style-embed */
+.button-glow {
+    --button-background: #fff;
+    --button-shadow: rgba(34, 155, 241, 0.3);
+    --button-shine-left: rgba(248, 138, 10, 0.5);
+    --button-shine-right: rgba(34, 155, 241, 0.65);
+    --button-glow-start: #e89f00;
+    --button-glow-end: #009FFD;
+
+    position: relative;
+    background: none;
+    z-index: 1;
+    box-shadow: 0 0.5rem 1.25rem var(--button-shadow);
+}
+
+.gradient {
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    overflow: hidden;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+    transform: scaleY(1.02) scaleX(1.005) rotate(-.35deg);
+}
+
+.gradient::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: 0;
+    right: 0;
+    transform: scale(1.05) translateY(-2.75rem) rotate(0deg) translateZ(0);
+    padding-bottom: 100%;
+    border-radius: 50%;
+    background: linear-gradient(90deg, var(--button-shine-left), var(--button-shine-right));
+    animation: rotate linear 2s infinite;
+}
+
+.button-glow-text-wr {
+    margin: 0.1rem;
+    z-index: 1;
+    position: relative;
+    box-sizing: border-box;
+    border-radius: inherit;
+    background-color: var(--button-background);
+    overflow: hidden;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.button-glow-text-wr::before {
+    content: '';
+    position: absolute;
+    left: -1rem;
+    top: -1rem;
+    transform: translate(var(--pointer-x, 0px), var(--pointer-y, 0px)) translateZ(0);
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: var(--button-glow, transparent);
+    opacity: var(--button-glow-opacity, 0);
+    transition: opacity var(--button-glow-duration, .3s);
+    filter: blur(20px);
+}
+
+.button-glow:hover {
+    --button-glow-opacity: 1;
+    --button-glow-duration: .25s;
+}
+
+@keyframes rotate {
+    to {
+        transform: scale(1.05) translateY(-2.75rem) rotate(360deg) translateZ(0);
+    }
+}
+
+@media (max-width: 479px) {
+    .gradient {
+        opacity: 0;
+    }
+
+    .button-glow-text-wr {
+        margin: 0;
+    }
+
+    .button-glow:hover {
+        --button-glow-opacity: 0;
+    }
+}
+
+.button-text-wr:hover .is-arrow-right {
+    transform: translate(0.25rem, 0px);
+}
+
+/* page-embed style */
+.home_hero-tagline-line {
+    background: linear-gradient(41deg, rgba(42.66, 42.66, 42.66, 0) 0%, white 50%, rgba(32.49, 8.73, 8.73, 0) 100%);
+}
+
+.home_solutions-card:hover .button-text {
+    color: var(--white);
+}
+
+.home_solutions-card:hover .btn-text-icon {
+    transform: translate(0.25rem, 0px);
+}
+
+.home_solutions-card:hover .home_solutions-vertical-gradient {
+    opacity: 1;
+}
+
+/* section-embed logo-scroll */
+@keyframes logo-scroll-left {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - 2rem));
+    }
+}
+
+.logo-scroll-left {
+    animation: logo-scroll-left 60s linear infinite;
+}
+
+@media (max-width: 479px) {
+    @keyframes logo-scroll-left {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(calc(-100% - 1.25rem));
+        }
+    }
+
+    .logo-scroll-left {
+        animation: logo-scroll-left 30s linear infinite;
+    }
+}
+
+/* testimonials-embed */
+.home_testimonials-card {
+    transition: background 0.3s ease;
+}
+
+.swiper-slide-active .home_testimonials-card {
+    background: radial-gradient(114.41% 114.9% at 12.95% 0%, #232B3F 0%, rgba(4, 4, 16, 0.00) 100%);
+}
+
+.swiper-slide-active .home_testimonials-icon {
+    opacity: 1;
+}
+
+.swiper-slide-active .home_quote-author-name {
+    color: var(--white);
+}
+
+/* blog-embed */
+@media (min-width: 480px) {
+
+    /* Customize every 1st, 2nd, & 3rd item inside your collection item */
+    .home_blog-cl-item:nth-child(3n+1) .home_blog-cl-card-title-wr {
+        font-size: 2rem;
+    }
+}
+
+.home_blog-cl-item:hover .home_blog-cl-card-title-gradient {
+    opacity: 1;
+}
+
+.home_blog-cl-item:hover .home_blog-cl-card-title {
+    opacity: 0;
+}
+
+/* Custom styling for the hero background video component */
+.home_hero-video {
+
+    /* Add your custom styles here, for example: */
+    /* opacity: 0.8; */
+    /* filter: brightness(0.9) contrast(1.1); */
+    /* border-radius: 12px; */
+    transform: translateY(-120px);
+
+}
+
+/* Central approach logo size override */
+.home_approach-logo-img {
+    width: 180px !important;
+    height: auto !important;
+}
+
+/* Ensure slider arrows are clickable and show pointer cursor */
+.square-button {
+    cursor: pointer !important;
+    pointer-events: auto !important;
+    position: relative;
+    z-index: 10 !important;
+}
+
+/* Swiper Layout overrides to fix Webflow layout conflicts */
+.swiper-t {
+    overflow: hidden !important;
+    position: relative !important;
+    display: block !important;
+}
+
+.swiper-t-wr {
+    display: flex !important;
+    flex-direction: row !important;
+    will-change: transform !important;
+    position: relative !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 1 !important;
+}
+
+.swiper-t-slide {
+    flex-shrink: 0 !important;
+    height: auto !important;
+    position: relative !important;
+    transition-property: transform !important;
+}
+
+/* Logo Name Brand Image styling */
+.nav-logo-text {
+    height: 9.2rem !important;
+    width: auto !important;
+}
+
+/* Testimonial profile pictures styling */
+.home_quote-author-img {
+    border-radius: 50% !important;
+    object-fit: cover !important;
+}
+
+/* CSS Hover support for Nav Dropdowns on Desktop */
+@media (min-width: 992px) {
+    .nav-dropdown {
+        position: relative !important;
+    }
+
+    /* Hidden State with Transition */
+    .nav-dropdown .nav-dropdown-list {
+        display: block !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        position: absolute !important;
+        top: 100% !important;
+        left: 0 !important;
+        transform: translateY(-10px) !important;
+        transition: opacity 0.25s cubic-bezier(0.4, 0, 0.2, 1), transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.25s !important;
+        margin-top: 0 !important;
+        padding-top: 0.75rem !important;
+        z-index: 1000 !important;
+        background-color: transparent !important;
+        box-shadow: none !important;
+    }
+
+    /* Ensure the inner wrapper does not add non-hoverable margin */
+    .nav-dropdown .nav-dropdown-inner-wr {
+        margin-top: 0 !important;
+    }
+
+    /* Hover Opened State */
+    .nav-dropdown:hover .nav-dropdown-list {
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+        transform: translateY(0px) !important;
+    }
+}
+
+/* Enable global native smooth scroll behavior */
+html {
+    scroll-behavior: smooth !important;
+}
+
+/* ==========================================================
+   TECHNOLOGY HUD CARDS
+========================================================== */
+
+:root {
+    --bg-0: #05090b;
+    --bg-1: #0a1216;
+    --line-dim: #1B323B;
+    --line-fill: #112028;
+    --line-bright: #56D2EC;
+    --line-bright-soft: #9be8f4;
+    --text-heading: #eef4f5;
+    --text-gray: #8a9aa0;
+    --badge-text: #cfe3e6;
+}
+
+/* ===========================
+   Grid
+=========================== */
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(18px, 2.4vw, 30px);
+}
+
+@media (max-width:880px) {
+    .cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:560px) {
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ===========================
+   Card
+=========================== */
+
+.card {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 490 / 800;
+
+    background:
+        radial-gradient(circle at top,
+            rgba(18, 34, 42, .96) 0%,
+            rgba(10, 17, 22, .98) 55%,
+            #040709 100%);
+
+    opacity: 0;
+    transform: translateY(18px);
+    animation: card-in .7s cubic-bezier(.2, .7, .2, 1) forwards;
+    animation-delay: var(--d, 0s);
+
+    box-shadow:
+        inset 0 0 18px rgba(255, 255, 255, .015);
+
+    transition:
+        transform .25s ease,
+        box-shadow .4s ease,
+        filter .4s ease;
+}
+
+@keyframes card-in {
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+.card:hover,
+.card:focus-within {
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 0 18px rgba(86, 210, 236, .18),
+        0 0 45px rgba(86, 210, 236, .08),
+        inset 0 0 22px rgba(86, 210, 236, .04);
+
+    filter: brightness(1.05);
+}
+
+/* ===========================
+   Frame
+=========================== */
+
+.frame {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: filter .35s ease;
+}
+
+.card:hover .frame {
+    filter: drop-shadow(0 0 8px rgba(121, 255, 216, 0.4));
+}
+
+.frame .ln {
+    stroke: var(--line-dim);
+    stroke-width: 1.25;
+    fill: none;
+}
+
+.frame .dots {
+    fill: var(--line-dim);
+    opacity: .8;
+}
+
+.frame .panel {
+    fill: var(--line-fill);
+    stroke: var(--line-dim);
+    stroke-width: 1.1;
+}
+
+.frame .badge-shape {
+    fill: var(--bg-1);
+    stroke: var(--line-dim);
+    stroke-width: 1.1;
+}
+
+/* ===========================
+   Number
+=========================== */
+
+.index {
+    position: absolute;
+    left: 4.47%;
+    top: 2.35%;
+    width: 33.22%;
+    height: 4.35%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+    font-weight: 800;
+    color: #79FFD8;
+    z-index: 2;
+}
+
+/* ===========================
+   Badge
+=========================== */
+
+.badge-label {
+    position: absolute;
+    left: auto;
+    right: 6%;
+    top: 2.5%;
+
+    width: auto;
+    height: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: right;
+
+    font-size: clamp(.58rem, 1.6vw, .68rem);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+
+    color: #79FFD8;
+    z-index: 2;
+}
+
+/* ===========================
+   Body
+=========================== */
+
+.card-body {
+    position: relative;
+    z-index: 2;
+
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    padding: 24% 9% 10%;
+}
+
+/* ===========================
+   Icon
+=========================== */
+
+.icon-wrap {
+    width: 54px;
+    height: 54px;
+
+    color: var(--line-bright);
+
+    filter: drop-shadow(0 0 6px rgba(86, 210, 236, .25));
+
+    margin-bottom: 22px;
+}
+
+.icon {
+    width: 100%;
+    height: 100%;
+}
+
+/* ===========================
+   Title
+=========================== */
+
+.title {
+    margin: 0 0 20px;
+
+    font-size: 1.45rem; font-weight: 800;
+
+    color: var(--text-heading);
+}
+
+/* ===========================
+   Feature List
+=========================== */
+
+.feature-list {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    width: 100%;
+}
+
+.feature-list li {
+    position: relative;
+
+    padding-left: 18px;
+
+    text-align: left;
+
+    font-size: 1.05rem; line-height: 1.5;
+
+    color: var(--text-gray);
+}
+
+.feature-list li::before {
+    content: "";
+
+    position: absolute;
+    left: 2px;
+    top: 10px;
+
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: var(--line-bright);
+
+    box-shadow: 0 0 5px rgba(86, 210, 236, .45);
+}
+
+/* ===========================
+   Reduced Motion
+=========================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .card {
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+
+}
+
+.card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.frame {
+    pointer-events: none;
+}
+
+.index {
+    pointer-events: none;
+}
+
+.badge-label {
+    pointer-events: none;
+}
+
+.card-body {
+    pointer-events: none;
+}
+
+.icon-wrap {
+    pointer-events: none;
+}
+
+.card {
+    display: block;
+    position: relative;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.frame,
+.frame *,
+.index,
+.badge-label,
+.card-body,
+.icon-wrap,
+.icon,
+.title,
+.feature-list,
+.feature-list * {
+    pointer-events: none;
+}
+
+/* ==========================================================
+   FOOTER GIANT BRAND GLOW TEXT
+========================================================== */
+
+.footer-brand-text-container {
+    position: relative;
+    width: 100%;
+    margin: 1.5rem 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    user-select: none;
+    z-index: 1;
+}
+
+.footer-brand-text {
+    font-family: 'Geist', 'Inter', sans-serif;
+    font-size: clamp(4rem, 15.5vw, 15rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    text-align: center;
+    line-height: 0.9;
+    margin: 0;
+    
+    /* Gradient fill rising from the bottom */
+    background: linear-gradient(to top, rgba(4, 190, 224, 0.45) 0%, rgba(4, 190, 224, 0.02) 80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    position: relative;
+    filter: drop-shadow(0 0 12px rgba(4, 190, 224, 0.18));
+}
+
+.footer-brand-text::before {
+    content: "ARCHZEN";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    -webkit-text-stroke: 1.5px rgba(4, 190, 224, 0.28);
+    -webkit-text-fill-color: transparent;
+}
+
+/* Make sure footer copyright section sits nicely over the brand container */
+.footer-bottom {
+    position: relative;
+    z-index: 10;
+    background: transparent !important;
+}
+
+/* ==========================================================================
+   New Left-Aligned Card Design with Top-Right Icons for resources/new.svg
+   ========================================================================== */
+.card-body-new {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 19% 12.2% 0% 12.2%;
+    box-sizing: border-box;
+}
+
+.card-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 5px;
+}
+
+.card-tagline {
+    font-family: 'Robotomono', monospace;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #9aa8ac;
+    letter-spacing: 0.12em;
+    margin: 0;
+    opacity: 0.75;
+}
+
+.card-icon-top-right {
+    width: 32px;
+    height: 32px;
+    color: #04BEE0;
+    filter: drop-shadow(0 0 4px rgba(4, 190, 224, 0.3));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.card:hover .card-icon-top-right {
+    transform: scale(1.1);
+    color: #5FE0E8;
+}
+
+.card-icon-top-right svg {
+    width: 100%;
+    height: 100%;
+    stroke-width: 1.4;
+}
+
+.card-title-new {
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: #eef4f5;
+    margin: 0 0 18px 0;
+    line-height: 1.25;
+    font-family: inherit;
+    transition: color 0.3s ease;
+}
+
+.card:hover .card-title-new {
+    color: #04BEE0;
+}
+
+.card-footer-new {
+    margin-top: auto;
+    width: 100%;
+    height: 13.1%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    box-sizing: border-box;
+}
+
+.learn-more-text {
+    font-size: 1.05rem;
+    color: #eef4f5;
+    font-weight: 600;
+}
+
+/* Remove footer CTA gradient border */
+.cta-stroke {
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+/* Hide mobile-only HUD scene on desktop */
+.mission-hud-scene {
+    display: none !important;
+}
+

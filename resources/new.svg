@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 800">
+
+  <!-- ============================================================
+       "AMPLIFY" LAYOUT CARD — design/frame only, no text content.
+       Drop your own <text> (eyebrow, title, subtitle, "Learn more")
+       into the marked empty zones below.
+
+       Corrected against the reference:
+         - only the top-left corner is chamfered — the other three
+           are sharp/square, not rounded
+         - single border only, no inner hairline
+
+       Palette (re-themed to #1B323B):
+         border / accent   #1B323B  (outer border, corner flag stripes)
+         watermark         #1B323B  (giant background "A", low opacity)
+         bottom bar        #1B323B  (solid CTA band)
+         bg gradient       #05090b → #1B323B  (near-black to theme color)
+  ============================================================= -->
+
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"  stop-color="#05090b"/>
+      <stop offset="55%" stop-color="#05090b"/>
+      <stop offset="100%" stop-color="#1B323B"/>
+    </linearGradient>
+
+    <linearGradient id="aGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#1B323B" stop-opacity="0.4"/>
+      <stop offset="70%"  stop-color="#1B323B" stop-opacity="0.65"/>
+      <stop offset="100%" stop-color="#1B323B" stop-opacity="0.85"/>
+    </linearGradient>
+
+    <filter id="borderGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="2.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- outer border shape: sharp on 3 corners, chamfered top-left only -->
+    <clipPath id="cardInner">
+      <path d="M42,8 H478 V792 H12 V42 Z"/>
+    </clipPath>
+
+    <!-- notch region that holds the 3 corner-flag stripes -->
+    <clipPath id="flagNotch">
+      <path d="M8,8 H42 L8,42 Z"/>
+    </clipPath>
+
+    <pattern id="flagStripes" width="14" height="14" patternTransform="rotate(-45)" patternUnits="userSpaceOnUse">
+      <rect width="14" height="14" fill="transparent"/>
+      <rect width="7" height="14" fill="#1B323B"/>
+    </pattern>
+  </defs>
+
+  <!-- page backdrop -->
+  <rect x="0" y="0" width="490" height="800" fill="#05090b"/>
+
+  <!-- card background + giant watermark "A" + bottom bar, all clipped to the card shape -->
+  <g clip-path="url(#cardInner)">
+    <rect x="0" y="0" width="490" height="800" fill="url(#bgGrad)"/>
+
+    <!-- watermark monogram, bleeds off the bottom edge -->
+    <path d="M296,420 L462,800 L392,800 L296,590 L200,800 L130,800 Z"
+          fill="url(#aGrad)"/>
+    <path d="M296,420 L462,800 L392,800 L296,590 L200,800 L130,800 Z"
+          fill="none" stroke="#2c505c" stroke-width="1" opacity="0.3"/>
+
+    <!-- bottom CTA bar -->
+    <rect x="0" y="695" width="490" height="105" fill="#1B323B"/>
+
+    <!-- arrow icon, right side of the bar — swap position/size as needed -->
+    <g transform="translate(400,747)" stroke="#eef4f5" stroke-width="3.4"
+       stroke-linecap="round" stroke-linejoin="round" fill="none">
+      <path d="M0,0 H34"/>
+      <path d="M23,-11 L34,0 L23,11"/>
+    </g>
+
+    <!-- ===== empty text zones (for reference only — delete these guides) ===== -->
+    <!-- eyebrow zone:   x=60  y=150-210            -->
+    <!-- title zone:     x=60  y=330-560            -->
+    <!-- subtitle zone:  x=60  y=610-770            -->
+    <!-- "learn more" zone: x=60-360 y=720-775 (left side of bottom bar) -->
+  </g>
+
+  <!-- outer border — sharp corners except the chamfered top-left -->
+  <path d="M42,8 H478 V792 H12 V42 Z"
+        fill="none" stroke="#1B323B" stroke-width="5" filter="url(#borderGlow)"/>
+
+  <!-- top-left corner flag: diagonal stripe pattern filling the chamfer notch -->
+  <path d="M8,8 H42 L8,42 Z" fill="url(#flagStripes)" filter="url(#borderGlow)"/>
+
+</svg>

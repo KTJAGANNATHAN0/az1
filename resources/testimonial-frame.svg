@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 210">
+
+  <!-- ============ palette ============
+       header-bg    #0d1a1f   (header panel fill)
+       chip-bg      #131f23   (name chip fill)
+       line-dim     #3a4a4e   (dashed border + divider)
+       line-bright  #56D2EC   (top edge, corner chamfer, tick, spine)
+  =================================== -->
+
+  <defs>
+    <clipPath id="tClip">
+      <path d="M10.5,0.5 H434 L459.5,26 V199.5 Q459.5,209.5 449.5,209.5 H10.5 Q0.5,209.5 0.5,199.5 V10.5 Q0.5,0.5 10.5,0.5 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- header background panel, clipped to the card's rounded/chamfered outline -->
+  <g clip-path="url(#tClip)">
+    <rect x="0" y="0" width="460" height="50" fill="#0d1a1f"/>
+  </g>
+
+  <!-- dashed outline: right edge (below the chamfer), bottom, left -->
+  <path d="M459.5,26 V199.5 Q459.5,209.5 449.5,209.5 H10.5 Q0.5,209.5 0.5,199.5 V10.5 Q0.5,0.5 10.5,0.5"
+        fill="none" stroke="#3a4a4e" stroke-width="1.2" stroke-dasharray="4 3"/>
+
+  <!-- bright solid accent: top edge + corner chamfer -->
+  <path d="M10.5,0.5 H434 L459.5,26" fill="none" stroke="#56D2EC" stroke-width="1.6"/>
+
+  <!-- divider under header -->
+  <path d="M0,50.5 H460" stroke="#3a4a4e" stroke-width="1" opacity="0.9"/>
+
+  <!-- name highlight chip (place "KEVIN NGUYEN" text inside this box in your HTML layer) -->
+  <rect x="14" y="12" width="152" height="26" fill="#131f23" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+
+  <!-- vertical tick divider between name and role -->
+  <rect x="178" y="16" width="2" height="18" fill="#56D2EC"/>
+
+  <!-- left spine accent -->
+  <rect x="0" y="60" width="3" height="138" rx="1.5" fill="#56D2EC" opacity="0.85"/>
+
+</svg>

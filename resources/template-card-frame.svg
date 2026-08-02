@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 480">
+
+  <!-- ============ palette ============
+       line-dim     #1B323B   (border / divider, default state)
+       stripe-gray  #9aa8ac   (hazard stripes, default state)
+       stripe-accent #56D2EC  (hazard stripes + icon + title, hover state)
+       bg-0/bg-1    #050a0c / #0a1216  (card background gradient)
+  =================================== -->
+
+  <defs>
+    <clipPath id="cardClip">
+      <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z"/>
+    </clipPath>
+    <pattern id="stripeGray" width="9" height="9" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <rect width="9" height="9" fill="transparent"/>
+      <rect width="4" height="9" fill="#9aa8ac"/>
+    </pattern>
+    <pattern id="stripeAccent" width="9" height="9" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+      <rect width="9" height="9" fill="transparent"/>
+      <rect width="4" height="9" fill="#56D2EC"/>
+    </pattern>
+  </defs>
+
+  <g clip-path="url(#cardClip)">
+    <!-- outer chamfered border: small cut top-left, small cut bottom-left, larger cut bottom-right -->
+    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" fill="none" stroke="#1B323B" stroke-width="1.4"/>
+
+    <!-- vertical divider separating the "MADE IN ___" lane from the content panel -->
+    <path d="M26,20 V460" stroke="#1B323B" stroke-width="1" opacity="0.8"/>
+
+    <!-- top-left hazard stripe band (static — does not change on hover) -->
+    <rect x="0" y="0" width="30" height="96" fill="url(#stripeGray)" opacity="0.5"/>
+
+    <!-- bottom-right hazard stripe band — default gray state -->
+    <rect x="430" y="332" width="30" height="100" fill="url(#stripeGray)"/>
+
+    <!-- bottom-right hazard stripe band — accent state (crossfade this over the gray
+         one on :hover / :focus-within by animating opacity 0 → 1 in your CSS) -->
+    <rect x="430" y="332" width="30" height="100" fill="url(#stripeAccent)" opacity="0"/>
+  </g>
+
+</svg>

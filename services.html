@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html data-wf-domain="www.archzen.com.au" data-wf-page="67c995cf629758b15942fb16"
+    data-wf-site="67c995cf629758b15942fb10" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Services - ArchZen Managed IT &amp; Cybersecurity</title>
+    <meta
+        content="Our comprehensive suite of managed IT services: Cyber Security, Support Services, and Cloud Services. Proactive pillars that protect and scale your business."
+        name="description" />
+    <meta content="Services - ArchZen Managed IT &amp; Cybersecurity" property="og:title" />
+    <meta
+        content="Our comprehensive suite of managed IT services: Cyber Security, Support Services, and Cloud Services. Proactive pillars that protect and scale your business."
+        property="og:description" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <link href="css/webflow.css" rel="stylesheet" type="text/css" />
+    <script src="js/init.js" type="text/javascript"></script>
+    <link href="resources/A Icon 1.png" rel="shortcut icon" type="image/x-icon" />
+    <link rel="stylesheet" href="css/style.css?v=12" />
+    <link rel="stylesheet" href="css/mobile.css?v=13" media="screen and (max-width: 991px)" />
+    <style>
+        .services-hero-section {
+            padding: 10rem 2.5rem 4rem 2.5rem;
+            position: relative;
+            background: radial-gradient(circle at 50% 20%, rgba(3, 123, 207, 0.08) 0%, transparent 60%);
+            text-align: center;
+        }
+
+        .services-title-large {
+            font-size: 4rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(90deg, #FFFFFF 0%, #BABABA 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .services-subtitle {
+            font-family: 'Robotomono', monospace;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #04BEE0;
+            margin-bottom: 2.5rem;
+        }
+
+        .services-intro-box {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.25rem;
+            color: #CCCCCC;
+            line-height: 1.6;
+        }
+
+        .category-section {
+            padding: 6rem 2.5rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .category-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-header {
+            max-width: 800px;
+            margin-bottom: 4rem;
+            text-align: left;
+        }
+
+        .category-tag {
+            font-family: 'Robotomono', monospace;
+            font-size: 0.88rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: #04BEE0;
+            margin-bottom: 1rem;
+        }
+
+        .category-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #FFFFFF;
+            margin-bottom: 1.5rem;
+        }
+
+        .category-desc {
+            font-size: 1.1rem;
+            color: #BABABA;
+            line-height: 1.7;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.75rem;
+        }
+
+        .service-card {
+            position: relative;
+            background: none;
+            border: none;
+            border-radius: 0;
+            padding: 0;
+            aspect-ratio: 460 / 480;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            overflow: visible;
+            box-sizing: border-box;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-card-frame {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+            pointer-events: none;
+            transition: filter 0.3s ease;
+        }
+
+        .service-card-frame .frame-bg {
+            fill: radial-gradient(circle at top, rgba(18, 34, 42, 0.96) 0%, rgba(10, 17, 22, 0.98) 55%, #040709 100%);
+            transition: fill 0.3s ease;
+        }
+
+        .service-card-frame .frame-border {
+            stroke: #1B323B;
+            stroke-width: 1.4;
+            fill: none;
+            transition: stroke 0.3s ease;
+        }
+
+        .service-card-frame .frame-divider {
+            stroke: #1B323B;
+            stroke-width: 1.0;
+            opacity: 0.8;
+            transition: stroke 0.3s ease;
+        }
+
+        .service-card-frame .stripe-top-left-gray {
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .service-card-frame .stripe-top-left-accent {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .service-card-frame .stripe-bottom-right-gray {
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .service-card-frame .stripe-bottom-right-accent {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .service-card:hover .service-card-frame {
+            filter: drop-shadow(0 0 10px rgba(4, 190, 160, 0.25));
+        }
+
+        .service-card:hover .service-card-frame .frame-border {
+            stroke: #04BEE0;
+        }
+
+        .service-card:hover .service-card-frame .stripe-bottom-right-accent {
+            opacity: 1;
+        }
+
+        .service-card:hover .service-card-frame .stripe-bottom-right-gray {
+            opacity: 0;
+        }
+
+        .service-card:hover .service-card-frame .stripe-top-left-accent {
+            opacity: 1;
+        }
+
+        .service-card:hover .service-card-frame .stripe-top-left-gray {
+            opacity: 0;
+        }
+
+        .service-card:hover .service-card-frame .stripe-top-left-accent {
+            opacity: 1;
+        }
+
+        .service-card:hover .service-card-frame .stripe-top-left-gray {
+            opacity: 0;
+        }
+
+        .service-card-body {
+            position: relative;
+            z-index: 2;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 10% 8% 8% 14%;
+            box-sizing: border-box;
+        }
+
+        .service-badge {
+            position: absolute;
+            left: 33.3%;
+            top: 2%;
+            width: 33.3%;
+            height: 6%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Robotomono', monospace;
+            font-size: 0.6rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: .06em;
+            color: #cfe3e6;
+            z-index: 2;
+            pointer-events: none;
+            opacity: 0.7;
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: rgba(4, 190, 160, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            color: #04BEE0;
+        }
+
+        .service-title {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 1rem;
+        }
+
+        .service-bullets {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .bullet-tag {
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            background: rgba(255, 255, 255, 0.05);
+            color: #CCCCCC;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .service-desc {
+            font-size: 0.95rem;
+            color: #BABABA;
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .cta-action-section {
+            padding: 8rem 2.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .cta-action-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: radial-gradient(100% 100% at 50% 0%, rgba(3, 123, 207, 0.08) 0%, rgba(4, 4, 16, 0.9) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 24px;
+            padding: 4.5rem 3rem;
+        }
+
+        .cta-btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 2.5rem;
+            flex-wrap: wrap;
+        }
+
+        .custom-cta-button {
+            display: inline-block;
+            padding: 0.9rem 2.5rem;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .btn-primary-blue {
+            background: #FFFFFF;
+            color: #040410;
+        }
+
+        .btn-primary-blue:hover {
+            background: #037BCF;
+            color: #FFFFFF;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(3, 123, 207, 0.35);
+        }
+
+        .btn-secondary-outline {
+            border: 2px solid rgba(255, 255, 255, 0.15);
+            color: #FFFFFF;
+            background: transparent;
+        }
+
+        .btn-secondary-outline:hover {
+            border-color: #04BEE0;
+            color: #04BEE0;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(4, 190, 160, 0.15);
+        }
+
+        @media (max-width: 991px) {
+            .services-title-large {
+                font-size: 3rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .services-title-large {
+                font-size: 2.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-action-container {
+                padding: 3rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!-- Header / Navigation Bar (matches index.html exactly) -->
+        <div class="nav-wr">
+            <div data-w-id="16a33179-36c8-d806-b49b-97b66be518c0" data-animation="default" data-collapse="medium"
+                data-duration="500" data-easing="ease-out" data-easing2="ease-in" role="banner" class="navbar w-nav"
+                style="background: rgba(4, 4, 16, 0.7); backdrop-filter: blur(12px);">
+                <div class="container">
+                    <div class="navbar-wr">
+                        <div class="brand" style="display: flex; align-items: center; gap: 0.5rem;">
+                            <a href="index.html"
+                                style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
+                                <img src="resources/A Icon 1.png" alt="ArchZen Logo"
+                                    style="height: 2.2rem; width: auto;" />
+                                <img src="resources/archzen_logo_text_white.png" alt="ArchZen" class="nav-logo-text" />
+                            </a>
+                        </div>
+                        <nav role="navigation" class="nav-menu w-nav-menu">
+                            <div class="nav-menu-inner">
+                                <div class="nav-menu-links-wr">
+                                    <div data-delay="0" data-hover="true" class="nav-dropdown w-dropdown">
+                                        <a href="#" class="nav-dropdown-toggle w-dropdown-toggle w--current"
+                                            style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.25rem;">
+                                            <p style="margin: 0;">Services</p>
+                                            <div class="nav-dropdown-icon w-icon-dropdown-toggle"></div>
+                                        </a>
+                                        <nav class="nav-dropdown-list w-dropdown-list"
+                                            style="max-width: 15rem !important;">
+                                            <div class="nav-dropdown-inner-wr" style="padding: 1.5rem;">
+                                                <div class="nav-dropdown-links-wr"
+                                                    style="display: flex; flex-direction: column; gap: 0.75rem;">
+                                                    <a href="services.html#cyber-security" class="nav-dropdown-link"
+                                                        style="padding: 0.25rem 0; font-weight: 500;">Cyber Security</a>
+                                                    <a href="services.html#support-services" class="nav-dropdown-link"
+                                                        style="padding: 0.25rem 0; font-weight: 500;">Support
+                                                        Services</a>
+                                                    <a href="services.html#cloud-services" class="nav-dropdown-link"
+                                                        style="padding: 0.25rem 0; font-weight: 500;">Cloud Services</a>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                    <div class="nav-divider"></div>
+                                    <div data-delay="0" data-hover="true" class="nav-dropdown w-dropdown">
+                                        <a href="#" class="nav-dropdown-toggle w-dropdown-toggle"
+                                            style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.25rem;">
+                                            <p style="margin: 0;">Solutions</p>
+                                            <div class="nav-dropdown-icon w-icon-dropdown-toggle"></div>
+                                        </a>
+                                        <nav class="nav-dropdown-list is-2 w-dropdown-list"
+                                            style="max-width: 15rem !important;">
+                                            <div class="nav-dropdown-inner-wr" style="padding: 1.5rem;">
+                                                <div class="nav-dropdown-links-wr"
+                                                    style="display: flex; flex-direction: column; gap: 0.75rem;">
+                                                    <a href="solutions.html#internet-voip" class="nav-dropdown-link"
+                                                        style="padding: 0.25rem 0; font-weight: 500;">Internet &amp;
+                                                        VOIP</a>
+                                                    <a href="solutions.html#it-consulting" class="nav-dropdown-link"
+                                                        style="padding: 0.25rem 0; font-weight: 500;">IT Consulting</a>
+                                                    <a href="solutions.html#operational-resilience"
+                                                        class="nav-dropdown-link"
+                                                        style="padding: 0.25rem 0; font-weight: 500;">Operational
+                                                        Resilience</a>
+                                                    <a href="solutions.html#cx-test-automation"
+                                                        class="nav-dropdown-link"
+                                                        style="padding: 0.25rem 0; font-weight: 500;">CX Test
+                                                        Automation</a>
+                                                    <a href="solutions.html#conversational-ai" class="nav-dropdown-link"
+                                                        style="padding: 0.25rem 0; font-weight: 500;">Conversational
+                                                        AI</a>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                    <div class="nav-divider"></div>
+                                    <div data-delay="0" data-hover="true" class="nav-dropdown w-dropdown">
+                                        <a href="#" class="nav-dropdown-toggle w-dropdown-toggle"
+                                            style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.25rem;">
+                                            <p style="margin: 0;">Industries</p>
+                                            <div class="nav-dropdown-icon w-icon-dropdown-toggle"></div>
+                                        </a>
+                                        <nav class="nav-dropdown-list is-3 w-dropdown-list">
+                                            <div class="nav-dropdown-inner-wr">
+                                                <div class="text-weight-medium hide-on-mobile">
+                                                    <div class="text-size-medium-18">Sectors Supported</div>
+                                                </div>
+                                                <div class="spacer-medium-10 hide-on-mobile"></div>
+                                                <div class="nav-dropdown-links-wr">
+                                                    <a href="industries.html#financial"
+                                                        class="nav-dropdown-link">Professional Services</a>
+                                                    <a href="industries.html#healthcare"
+                                                        class="nav-dropdown-link">Healthcare &amp; NDIS</a>
+                                                    <a href="industries.html#legal" class="nav-dropdown-link">Law
+                                                        Firm</a>
+                                                    <a href="industries.html#all-industries"
+                                                        class="nav-dropdown-link">Co-Managed IT</a>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                    <div class="nav-divider"></div>
+                                    <a href="compliance-privacy.html" class="nav-link">Compliance</a>
+                                    <a href="about.html" class="nav-link">About Us</a>
+                                </div>
+                            </div>
+                        </nav>
+                        <div class="nav-burger-link w-nav-button">
+                            <div class="nav-burger-inner">
+                                <div class="nav-burger-icons-wr"><img loading="eager"
+                                        src="resources/67dc026489c617fcaabbb106_menu.svg" alt=""
+                                        class="nav-burger-icon is-1" /><img loading="eager"
+                                        src="resources/67dc02645b95e32899fab030_Close.svg" alt=""
+                                        class="nav-burger-icon is-2" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <main class="main-wrapper">
+            <!-- Services Hero Section -->
+            <section class="services-hero-section">
+                <div class="container">
+                    <p class="services-subtitle">Full-Spectrum Capabilities</p>
+                    <h1 class="services-title-large">End-to-End IT Services</h1>
+                    <div class="services-intro-box">
+                        <p>Our goal is to be your most trusted IT partner; delivering peace of mind through reliable,
+                            secure, and proactive technology solutions that safeguard your business reputation.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 1. Cyber Security Services Section -->
+            <section id="cyber-security" class="category-section">
+                <div class="category-container">
+                    <div class="category-header">
+                        <p class="category-tag">PROTECT</p>
+                        <h2 class="category-title">Cyber Security Services</h2>
+                        <p class="category-desc">We protect your business from evolving digital threats with proactive,
+                            end-to-end solutions. From firewalls and endpoint protection to continuous threat
+                            monitoring, compliance mapping, and staff training, we customize our defenses to secure your
+                            unique environment.</p>
+                    </div>
+
+                                <svg style="position: absolute; width: 0; height: 0; overflow: hidden;" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <clipPath id="solCardClip">
+                  <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z"/>
+                </clipPath>
+                <pattern id="solStripeGray" width="9" height="9" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+                  <rect width="9" height="9" fill="transparent"/>
+                  <rect width="4" height="9" fill="#9aa8ac"/>
+                </pattern>
+                <pattern id="solStripeAccent" width="9" height="9" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
+                  <rect width="9" height="9" fill="transparent"/>
+                  <rect width="4" height="9" fill="#04BEE0"/>
+                </pattern>
+              </defs>
+            </svg>
+            <div class="services-grid">
+                        <!-- Email & Cloud Security -->
+                        <div class="service-card">
+                            <span class="service-badge">CYBER</span>
+                            <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
+                                <g clip-path="url(#solCardClip)">
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-border" />
+                                    <path d="M26,20 V460" class="frame-divider" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeGray)" class="stripe-top-left-gray" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeAccent)" class="stripe-top-left-accent" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeGray)" class="stripe-bottom-right-gray" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeAccent)" class="stripe-bottom-right-accent" />
+                                </g>
+                            </svg>
+                            <div class="service-card-body">
+                                <div>
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                        </path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <h3 class="service-title">Email &amp; Cloud Security Management</h3>
+                                <div class="service-bullets">
+                                    <span class="bullet-tag">Encryption</span>
+                                    <span class="bullet-tag">MFA</span>
+                                    <span class="bullet-tag">Monitoring</span>
+                                    <span class="bullet-tag">Phishing Defense</span>
+                                </div>
+                            </div>
+                            <p class="service-desc">Complete protection for cloud communication assets. Advanced email
+                                encryption, MFA policy deployment, threat analysis, and phishing protection to stop
+                                breaches before they reach user inboxes.</p>
+                            </div>
+                        </div>
+
+                        <!-- Firewall Security -->
+                        <div class="service-card">
+                            <span class="service-badge">CYBER</span>
+                            <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
+                                <g clip-path="url(#solCardClip)">
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-border" />
+                                    <path d="M26,20 V460" class="frame-divider" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeGray)" class="stripe-top-left-gray" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeAccent)" class="stripe-top-left-accent" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeGray)" class="stripe-bottom-right-gray" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeAccent)" class="stripe-bottom-right-accent" />
+                                </g>
+                            </svg>
+                            <div class="service-card-body">
+                                <div>
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <rect x="3" y="11" width="18" height="10" rx="2" ry="2"></rect>
+                                        <path d="M12 2v9"></path>
+                                        <path d="M8 5h8"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="service-title">Network Perimeter Defence</h3>
+                                <div class="service-bullets">
+                                    <span class="bullet-tag">Traffic Control</span>
+                                    <span class="bullet-tag">Access Prevention</span>
+                                    <span class="bullet-tag">Malware Block</span>
+                                </div>
+                            </div>
+                            <p class="service-desc">Robust perimeter security. Continuous monitoring and control of
+                                inbound/outbound network traffic, preventing unauthorized access and stopping malicious
+                                payloads at your network gates.</p>
+                            </div>
+                        </div>
+
+                        <!-- End Point Protection & Response -->
+                        <div class="service-card">
+                            <span class="service-badge">CYBER</span>
+                            <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
+                                <g clip-path="url(#solCardClip)">
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-border" />
+                                    <path d="M26,20 V460" class="frame-divider" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeGray)" class="stripe-top-left-gray" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeAccent)" class="stripe-top-left-accent" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeGray)" class="stripe-bottom-right-gray" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeAccent)" class="stripe-bottom-right-accent" />
+                                </g>
+                            </svg>
+                            <div class="service-card-body">
+                                <div>
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                                    </svg>
+                                </div>
+                                <h3 class="service-title">Endpoint Detection &amp; Response (EDR)</h3>
+                                <div class="service-bullets">
+                                    <span class="bullet-tag">Real-Time Threat</span>
+                                    <span class="bullet-tag">EDR</span>
+                                    <span class="bullet-tag">Rapid Containment</span>
+                                </div>
+                            </div>
+                            <p class="service-desc">Continuous threat detection for work laptops, workstations, and
+                                mobile devices. Real-time endpoint monitoring detects anomalous activity, isolating
+                                compromised devices instantly.</p>
+                            </div>
+                        </div>
+
+                        <!-- Employee Awareness Training -->
+                        <div class="service-card">
+                            <span class="service-badge">CYBER</span>
+                            <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
+                                <g clip-path="url(#solCardClip)">
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-border" />
+                                    <path d="M26,20 V460" class="frame-divider" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeGray)" class="stripe-top-left-gray" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeAccent)" class="stripe-top-left-accent" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeGray)" class="stripe-bottom-right-gray" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeAccent)" class="stripe-bottom-right-accent" />
+                                </g>
+                            </svg>
+                            <div class="service-card-body">
+                                <div>
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                        <circle cx="9" cy="7" r="4"></circle>
+                                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="service-title">Cyber Security Awareness Programme</h3>
+                                <div class="service-bullets">
+                                    <span class="bullet-tag">Interactive Learning</span>
+                                    <span class="bullet-tag">Threat Recognition</span>
+                                </div>
+                            </div>
+                            <p class="service-desc">Equip your team to recognize and report suspicious activity.
+                                Security awareness training programs featuring simulated phishing tests reduce the risk
+                                of human-error breaches.</p>
+                            </div>
+                        </div>
+
+                        <!-- Conditional Access Policy Management -->
+                        <div class="service-card">
+                            <span class="service-badge">CYBER</span>
+                            <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
+                                <g clip-path="url(#solCardClip)">
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-border" />
+                                    <path d="M26,20 V460" class="frame-divider" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeGray)" class="stripe-top-left-gray" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeAccent)" class="stripe-top-left-accent" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeGray)" class="stripe-bottom-right-gray" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeAccent)" class="stripe-bottom-right-accent" />
+                                </g>
+                            </svg>
+                            <div class="service-card-body">
+                                <div>
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="service-title">Identity &amp; Access Governance</h3>
+                                <div class="service-bullets">
+                                    <span class="bullet-tag">Assessments</span>
+                                    <span class="bullet-tag">Governance</span>
+                                    <span class="bullet-tag">M365 Rules</span>
+                                </div>
+                            </div>
+                            <p class="service-desc">Implement zero-trust rules for data access. We construct conditional
+                                access policies (like location/device constraints) to protect sensitive cloud portals
+                                from compromised logins.</p>
+                            </div>
+                        </div>
+
+                        <!-- Penetration Testing -->
+                        <div class="service-card">
+                            <span class="service-badge">CYBER</span>
+                            <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
+                                <g clip-path="url(#solCardClip)">
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-border" />
+                                    <path d="M26,20 V460" class="frame-divider" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeGray)" class="stripe-top-left-gray" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeAccent)" class="stripe-top-left-accent" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeGray)" class="stripe-bottom-right-gray" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeAccent)" class="stripe-bottom-right-accent" />
+                                </g>
+                            </svg>
+                            <div class="service-card-body">
+                                <div>
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                        <polyline points="2 17 12 22 22 17"></polyline>
+                                        <polyline points="2 12 12 17 22 12"></polyline>
+                                    </svg>
+                                </div>
+                                <h3 class="service-title">Vulnerability Assessment &amp; Penetration Testing (VAPT)</h3>
+                                <div class="service-bullets">
+                                    <span class="bullet-tag">Ethical Hacking</span>
+                                    <span class="bullet-tag">Reports</span>
+                                    <span class="bullet-tag">Uplift Remediation</span>
+                                </div>
+                            </div>
+                            <p class="service-desc">Simulate real-world attacks against your network and software
+                                architectures. Comprehensive reporting exposes compliance vulnerabilities and provides
+                                direct actionable recommendations.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. Support Services Section -->
+            <section id="support-services" class="category-section"
+                style="background: linear-gradient(180deg, transparent 0%, rgba(3, 123, 207, 0.02) 50%, transparent 100%);">
+                <div class="category-container">
+                    <div class="category-header">
+                        <p class="category-tag">SUPPORT</p>
+                        <h2 class="category-title">IT Support Services</h2>
+                        <p class="category-desc">Proactive managed IT support in Melbourne that keeps your operations
+                            running efficiently. Our friendly help desk and skilled consultants simplify your technology
+                            administration, offering rapid remote resolution and onsite emergency visits when needed.
+                        </p>
+                    </div>
+
+                    <div class="services-grid">
+                        <!-- Helpdesk & Remote Support -->
+                        <div class="service-card">
+                            <span class="service-badge">SUPP</span>
+                            <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
+                                <g clip-path="url(#solCardClip)">
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-border" />
+                                    <path d="M26,20 V460" class="frame-divider" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeGray)" class="stripe-top-left-gray" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeAccent)" class="stripe-top-left-accent" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeGray)" class="stripe-bottom-right-gray" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeAccent)" class="stripe-bottom-right-accent" />
+                                </g>
+                            </svg>
+                            <div class="service-card-body">
+                                <div>
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="service-title">Helpdesk &amp; Remote Support</h3>
+                                <div class="service-bullets">
+                                    <span class="bullet-tag">Help Desk</span>
+                                    <span class="bullet-tag">SLA Support</span>
+                                    <span class="bullet-tag">24/7 Response</span>
+                                </div>
+                            </div>
+                            <p class="service-desc">Rapid remote troubleshooting and IT system issue resolution. Our responsive support team keeps your daily operational productivity high, minimizing downtime.</p>
+                            </div>
+                        </div>
+
+                        <!-- Server & Infrastructure Management -->
+                        <div class="service-card">
+                            <span class="service-badge">SUPP</span>
+                            <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
+                                <g clip-path="url(#solCardClip)">
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-border" />
+                                    <path d="M26,20 V460" class="frame-divider" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeGray)" class="stripe-top-left-gray" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeAccent)" class="stripe-top-left-accent" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeGray)" class="stripe-bottom-right-gray" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeAccent)" class="stripe-bottom-right-accent" />
+                                </g>
+                            </svg>
+                            <div class="service-card-body">
+                                <div>
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect>
+                                        <rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect>
+                                        <line x1="6" y1="6" x2="6.01" y2="6"></line>
+                                        <line x1="6" y1="18" x2="6.01" y2="18"></line>
+                                    </svg>
+                                </div>
+                                <h3 class="service-title">Server &amp; Infrastructure Management</h3>
+                                <div class="service-bullets">
+                                    <span class="bullet-tag">Server Health</span>
+                                    <span class="bullet-tag">OS Patching</span>
+                                    <span class="bullet-tag">Monitoring</span>
+                                </div>
+                            </div>
+                            <p class="service-desc">Continuous server monitoring, regular patch deployments, and performance optimization. We keep your server environment reliable and running without friction.</p>
+                            </div>
+                        </div>
+
+                        <!-- Onsite Support & Emergency Dispatch -->
+                        <div class="service-card">
+                            <span class="service-badge">SUPP</span>
+                            <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
+                                <g clip-path="url(#solCardClip)">
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-border" />
+                                    <path d="M26,20 V460" class="frame-divider" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeGray)" class="stripe-top-left-gray" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeAccent)" class="stripe-top-left-accent" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeGray)" class="stripe-bottom-right-gray" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeAccent)" class="stripe-bottom-right-accent" />
+                                </g>
+                            </svg>
+                            <div class="service-card-body">
+                                <div>
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <h3 class="service-title">Onsite Support &amp; Emergency Dispatch</h3>
+                                <div class="service-bullets">
+                                    <span class="bullet-tag">Melbourne Wide</span>
+                                    <span class="bullet-tag">Onsite Support</span>
+                                    <span class="bullet-tag">Hardware Swap</span>
+                                </div>
+                            </div>
+                            <p class="service-desc">Emergency onsite assistance for critical hardware failures. Our technicians deploy to your physical location in Melbourne to swap hardware and restore systems fast.</p>
+                            </div>
+                        </div>
+
+                        <!-- Device Provisioning & Lifecycle -->
+                        <div class="service-card">
+                            <span class="service-badge">SUPP</span>
+                            <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
+                                <g clip-path="url(#solCardClip)">
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-border" />
+                                    <path d="M26,20 V460" class="frame-divider" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeGray)" class="stripe-top-left-gray" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeAccent)" class="stripe-top-left-accent" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeGray)" class="stripe-bottom-right-gray" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeAccent)" class="stripe-bottom-right-accent" />
+                                </g>
+                            </svg>
+                            <div class="service-card-body">
+                                <div>
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                        <line x1="8" y1="21" x2="16" y2="21"></line>
+                                        <line x1="12" y1="17" x2="12" y2="21"></line>
+                                    </svg>
+                                </div>
+                                <h3 class="service-title">Device Provisioning &amp; Lifecycle</h3>
+                                <div class="service-bullets">
+                                    <span class="bullet-tag">SOE Config</span>
+                                    <span class="bullet-tag">MDM Enrollment</span>
+                                    <span class="bullet-tag">Procurement</span>
+                                </div>
+                            </div>
+                            <p class="service-desc">Complete setup, deployment, and MDM enrollment of work laptops and devices. We manage configuration and procurement to keep your onboarding smooth and secure.</p>
+                            </div>
+                        </div>
+
+                        <!-- Data Backup & Disaster Recovery -->
+                        <div class="service-card">
+                            <span class="service-badge">SUPP</span>
+                            <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
+                                <g clip-path="url(#solCardClip)">
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-border" />
+                                    <path d="M26,20 V460" class="frame-divider" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeGray)" class="stripe-top-left-gray" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeAccent)" class="stripe-top-left-accent" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeGray)" class="stripe-bottom-right-gray" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeAccent)" class="stripe-bottom-right-accent" />
+                                </g>
+                            </svg>
+                            <div class="service-card-body">
+                                <div>
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <ellipse cx="12" cy="5" rx="9" ry="3"></ellipse>
+                                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path>
+                                        <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="service-title">Data Backup &amp; Disaster Recovery</h3>
+                                <div class="service-bullets">
+                                    <span class="bullet-tag">Cloud Backups</span>
+                                    <span class="bullet-tag">Recovery Drills</span>
+                                    <span class="bullet-tag">Data Retention</span>
+                                </div>
+                            </div>
+                            <p class="service-desc">Automated data backups and routine recovery testing. We establish comprehensive disaster recovery frameworks to ensure your operational continuity in any event.</p>
+                            </div>
+                        </div>
+
+                        <!-- Network & WiFi Management -->
+                        <div class="service-card">
+                            <span class="service-badge">SUPP</span>
+                            <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
+                                <g clip-path="url(#solCardClip)">
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-border" />
+                                    <path d="M26,20 V460" class="frame-divider" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeGray)" class="stripe-top-left-gray" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeAccent)" class="stripe-top-left-accent" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeGray)" class="stripe-bottom-right-gray" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeAccent)" class="stripe-bottom-right-accent" />
+                                </g>
+                            </svg>
+                            <div class="service-card-body">
+                                <div>
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M5 12.55a11 11 0 0 1 14.08 0"></path>
+                                        <path d="M1.42 9a16 16 0 0 1 21.16 0"></path>
+                                        <path d="M8.53 16.11a6 6 0 0 1 6.95 0"></path>
+                                        <line x1="12" y1="20" x2="12.01" y2="20"></line>
+                                    </svg>
+                                </div>
+                                <h3 class="service-title">Network &amp; WiFi Management</h3>
+                                <div class="service-bullets">
+                                    <span class="bullet-tag">Switch Config</span>
+                                    <span class="bullet-tag">WiFi Optimisation</span>
+                                    <span class="bullet-tag">Routers</span>
+                                </div>
+                            </div>
+                            <p class="service-desc">Monitoring and configuration of office network connections, routers, and firewalls. We maintain optimized WiFi coverage and secure network segmentation for your teams.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. Cloud Services Section -->
+            <section id="cloud-services" class="category-section">
+                <div class="category-container">
+                    <div class="category-header">
+                        <p class="category-tag">SCALE</p>
+                        <h2 class="category-title">Cloud Services</h2>
+                        <p class="category-desc">Leverage the flexibility, security, and scalability of the modern
+                            cloud. From secure data migration paths to SharePoint document structures, Azure server
+                            optimization, and compliance licensing structures, we streamline your Microsoft 365
+                            footprint.</p>
+                    </div>
+
+                    <div class="services-grid">
+                        <!-- Microsoft Azure -->
+                        <div class="service-card">
+                            <span class="service-badge">CLOUD</span>
+                            <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
+                                <g clip-path="url(#solCardClip)">
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-border" />
+                                    <path d="M26,20 V460" class="frame-divider" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeGray)" class="stripe-top-left-gray" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeAccent)" class="stripe-top-left-accent" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeGray)" class="stripe-bottom-right-gray" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeAccent)" class="stripe-bottom-right-accent" />
+                                </g>
+                            </svg>
+                            <div class="service-card-body">
+                                <div>
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                        <path d="M2 17l10 5 10-5"></path>
+                                        <path d="M2 12l10 5 10-5"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="service-title">Microsoft Azure Cloud Services</h3>
+                                <div class="service-bullets">
+                                    <span class="bullet-tag">Cloud Infrastructure</span>
+                                    <span class="bullet-tag">Virtual Servers</span>
+                                    <span class="bullet-tag">Azure Active Dir</span>
+                                </div>
+                            </div>
+                            <p class="service-desc">Deploy and manage virtual servers, databases, and Active Directory
+                                structures securely in the cloud. We optimize performance metrics to eliminate hosting
+                                cost leakage.</p>
+                            </div>
+                        </div>
+
+                        <!-- Implementation & Migration -->
+                        <div class="service-card">
+                            <span class="service-badge">CLOUD</span>
+                            <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
+                                <g clip-path="url(#solCardClip)">
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-border" />
+                                    <path d="M26,20 V460" class="frame-divider" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeGray)" class="stripe-top-left-gray" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeAccent)" class="stripe-top-left-accent" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeGray)" class="stripe-bottom-right-gray" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeAccent)" class="stripe-bottom-right-accent" />
+                                </g>
+                            </svg>
+                            <div class="service-card-body">
+                                <div>
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M16 3h5v5"></path>
+                                        <path d="M8 21H3v-5"></path>
+                                        <path d="M12 22v-5"></path>
+                                        <path d="M21 3L12 12"></path>
+                                        <path d="M3 21l9-9"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="service-title">Cloud Implementation &amp; Migration</h3>
+                                <div class="service-bullets">
+                                    <span class="bullet-tag">Transition Planning</span>
+                                    <span class="bullet-tag">Zero Downtime</span>
+                                    <span class="bullet-tag">Training</span>
+                                </div>
+                            </div>
+                            <p class="service-desc">Seamless cloud migrations for emails, database records, and server
+                                settings. We plan transitions thoroughly to minimize user disruptions and operational
+                                friction.</p>
+                            </div>
+                        </div>
+
+                        <!-- Email Management -->
+                        <div class="service-card">
+                            <span class="service-badge">CLOUD</span>
+                            <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
+                                <g clip-path="url(#solCardClip)">
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-border" />
+                                    <path d="M26,20 V460" class="frame-divider" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeGray)" class="stripe-top-left-gray" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeAccent)" class="stripe-top-left-accent" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeGray)" class="stripe-bottom-right-gray" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeAccent)" class="stripe-bottom-right-accent" />
+                                </g>
+                            </svg>
+                            <div class="service-card-body">
+                                <div>
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                        </path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <h3 class="service-title">Email Infrastructure Management</h3>
+                                <div class="service-bullets">
+                                    <span class="bullet-tag">Threat Protection</span>
+                                    <span class="bullet-tag">Sync Config</span>
+                                    <span class="bullet-tag">SLA Support</span>
+                                </div>
+                            </div>
+                            <p class="service-desc">Centralized email infrastructure support. We set up custom DKIM/SPF
+                                protection rules, device synchronization profiles, and shared contact directories
+                                securely.</p>
+                            </div>
+                        </div>
+
+                        <!-- SharePoint -->
+                        <div class="service-card">
+                            <span class="service-badge">CLOUD</span>
+                            <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
+                                <g clip-path="url(#solCardClip)">
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-border" />
+                                    <path d="M26,20 V460" class="frame-divider" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeGray)" class="stripe-top-left-gray" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeAccent)" class="stripe-top-left-accent" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeGray)" class="stripe-bottom-right-gray" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeAccent)" class="stripe-bottom-right-accent" />
+                                </g>
+                            </svg>
+                            <div class="service-card-body">
+                                <div>
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 class="service-title">SharePoint Intranet &amp; Collaboration</h3>
+                                <div class="service-bullets">
+                                    <span class="bullet-tag">File Architecture</span>
+                                    <span class="bullet-tag">Permissions</span>
+                                    <span class="bullet-tag">Teams Integration</span>
+                                </div>
+                            </div>
+                            <p class="service-desc">Build shared directories, intranets, and file structures. We audit
+                                folder hierarchies and deploy access policies to ensure secure, clean team
+                                collaboration.</p>
+                            </div>
+                        </div>
+
+                        <!-- Microsoft Licensing -->
+                        <div class="service-card">
+                            <span class="service-badge">CLOUD</span>
+                            <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
+                                <g clip-path="url(#solCardClip)">
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-border" />
+                                    <path d="M26,20 V460" class="frame-divider" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeGray)" class="stripe-top-left-gray" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeAccent)" class="stripe-top-left-accent" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeGray)" class="stripe-bottom-right-gray" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeAccent)" class="stripe-bottom-right-accent" />
+                                </g>
+                            </svg>
+                            <div class="service-card-body">
+                                <div>
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                </div>
+                                <h3 class="service-title">Microsoft Licensing Management</h3>
+                                <div class="service-bullets">
+                                    <span class="bullet-tag">Compliance Audit</span>
+                                    <span class="bullet-tag">Cost Optimization</span>
+                                    <span class="bullet-tag">Renewals</span>
+                                </div>
+                            </div>
+                            <p class="service-desc">Simplify complex Microsoft 365 licensing paths (Business Premium,
+                                Enterprise E3/E5). We match licenses to your compliance and security requirements to
+                                save budget.</p>
+                            </div>
+                        </div>
+
+                        <!-- Website Hosting & Maintenance -->
+                        <div class="service-card">
+                            <span class="service-badge">CLOUD</span>
+                            <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
+                                <g clip-path="url(#solCardClip)">
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
+                                    <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-border" />
+                                    <path d="M26,20 V460" class="frame-divider" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeGray)" class="stripe-top-left-gray" />
+                                    <rect x="0" y="0" width="30" height="96" fill="url(#solStripeAccent)" class="stripe-top-left-accent" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeGray)" class="stripe-bottom-right-gray" />
+                                    <rect x="430" y="332" width="30" height="100" fill="url(#solStripeAccent)" class="stripe-bottom-right-accent" />
+                                </g>
+                            </svg>
+                            <div class="service-card-body">
+                                <div>
+                                <div class="service-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <circle cx="12" cy="12" r="10"></circle>
+                                        <line x1="2" y1="12" x2="22" y2="12"></line>
+                                        <path
+                                            d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 class="service-title">Website Hosting &amp; Managed Maintenance</h3>
+                                <div class="service-bullets">
+                                    <span class="bullet-tag">99.9% Uptime</span>
+                                    <span class="bullet-tag">WP Updates</span>
+                                    <span class="bullet-tag">Backup Schedules</span>
+                                </div>
+                            </div>
+                            <p class="service-desc">High-speed SSD hosting setups with continuous automated cloud backup
+                                routines, security patches, plugin audits, and rapid recovery assistance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Call to Action Section -->
+            <section class="cta-action-section">
+                <div class="container cta-action-container">
+                    <p class="section-tag" style="color: #04BEE0;">READY TO KICKSTART?</p>
+                    <h2 class="section-heading-medium" style="margin-bottom: 1.5rem;">Let's Build Something Secure
+                        Together</h2>
+                    <div style="font-size: 1.1rem; color: #CCCCCC; max-width: 600px; margin: 0 auto;">
+                        Schedule a strategy call with our certified cybersecurity and managed IT consultants today.
+                    </div>
+                    <div class="cta-btn-group">
+                        <a href="contact.html" class="custom-cta-button btn-primary-blue">Book a consultation</a>
+                        <a href="contact.html" class="custom-cta-button btn-secondary-outline">Consult Us</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer (matches index.html exactly) -->
+        <div class="footer-bottom"
+            style="padding: 4rem 2.5rem; background: #020208; border-top: 1px solid rgba(255, 255, 255, 0.03);">
+            <div class="container" style="display: flex; flex-direction: column; gap: 3rem;">
+                <div
+                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
+                    <div class="footer-logo-wr" style="display: flex; align-items: center; gap: 0.5rem;">
+                        <img src="resources/A Icon 1.png" alt="ArchZen Logo" style="height: 2.2rem; width: auto;" />
+                        <img src="resources/archzen_logo_text_white.png" alt="ArchZen" class="nav-logo-text" />
+                    </div>
+                    <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                        <a href="services.html" class="w--current"
+                            style="color: #FFFFFF; font-size: 0.9rem; text-decoration: none; font-weight: bold;">Services</a>
+                        <a href="solutions.html"
+                            style="color: #BABABA; font-size: 0.9rem; text-decoration: none;">Solutions</a>
+                        <a href="industries.html"
+                            style="color: #BABABA; font-size: 0.9rem; text-decoration: none;">Industries</a>
+                        <a href="compliance-privacy.html"
+                            style="color: #BABABA; font-size: 0.9rem; text-decoration: none;">Compliance &amp;
+                            Privacy</a>
+                        <a href="about.html" style="color: #BABABA; font-size: 0.9rem; text-decoration: none;">About
+                            Us</a>
+                    </div>
+                </div>
+            <div
+                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 2rem;">
+                    <div class="text-color-light-grey" style="font-size: 0.85rem;">
+                        <p>© 2026 Archzen IT Services. all rights reserved.</p>
+                    </div>
+                    <div style="display: flex; gap: 1.5rem; align-items: center;">
+                        <a href="compliance-privacy.html#privacy-policy"
+                            style="color: #BABABA; font-size: 0.85rem; text-decoration: none;">PRIVACY POLICY</a>
+                        <span style="color: #333;">|</span>
+                        <a href="mailto:enquiries@archzen.com.au"
+                            style="color: #BABABA; font-size: 0.85rem; text-decoration: none;">enquiries@archzen.com.au</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-brand-text-container">
+            <div class="footer-brand-text">ARCHZEN</div>
+        </div>
+    </div>
+
+    <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=67c995cf629758b15942fb10"
+        type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+    <script src="js/webflow.schunk.36b8fb49256177c8.js" type="text/javascript"
+        integrity="sha384-4abIlA5/v7XaW1HMXKBgnUuhnjBYJ/Z9C1OSg4OhmVw9O3QeHJ/qJqFBERCDPv7G"
+        crossorigin="anonymous"></script>
+    <script src="js/webflow.schunk.d9fac0197bbf1620.js" type="text/javascript"
+        integrity="sha384-3LGd2PPe0vsNPlYPJ8WkvD4G6tVTYmVfw1o8exDTt8GTnRnSy05tuV0oatZLwhG+"
+        crossorigin="anonymous"></script>
+    <script src="js/webflow.81c3df57.aa0bb3188abb363d.js" type="text/javascript"
+        integrity="sha384-uScabh9j8MNI167300pWvkWwyzUwTolouTPamI0QPa3BUI4m9XgthkYYsAsEgI/f"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js?v=99"></script>
+    <script src="js/mobile.js"></script>
+</body>
+
+</html>
