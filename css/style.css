@@ -1855,8 +1855,8 @@ html {
                                         margin: 2rem 0;
                                     }
 
-                                    .home_expertise-bg-img {
-                                        transform: translateY(-80px) !important;
+                                    .home_expertise-bg-wr {
+                                        margin-top: -90px !important;
                                     }
 
                                     .tech-marquee-track {
