@@ -676,4 +676,63 @@ body {
             padding: 2.5rem 1.25rem !important;
         }
     }
+
+    /* --------------------------------------------------
+       Responsive Alignments for Solutions & Industries Pages
+       -------------------------------------------------- */
+    
+    /* 1. Solutions Grid & Category sections responsive scaling */
+    .category-section {
+        padding: 4rem 1.25rem !important; /* reduces padding to prevent container overflow */
+        overflow: hidden !important;
+    }
+
+    .category-container {
+        padding-left: 0.25rem !important;
+        padding-right: 0.25rem !important;
+    }
+
+    .category-title {
+        font-size: clamp(1.8rem, 7vw, 2.3rem) !important;
+        line-height: 1.25 !important;
+        word-break: break-word !important;
+        overflow-wrap: break-word !important;
+    }
+
+    .solutions-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 1.5rem !important;
+    }
+
+    @media screen and (max-width: 767px) {
+        .solutions-grid {
+            grid-template-columns: 1fr !important;
+        }
+    }
+
+    /* 2. Industries Page \"Other Supported Sectors\" Grid alignments */
+    .other-industries-section {
+        padding: 5rem 1.25rem !important; /* reduces large horizontal gaps */
+    }
+
+    .other-grid {
+        gap: 1rem !important;
+        grid-template-columns: repeat(2, 1fr) !important; /* keeps a clean 2-column layout */
+    }
+
+    .other-card {
+        padding: 1.5rem 0.75rem !important;
+        min-height: 120px !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .other-title {
+        font-size: 0.95rem !important;
+        text-align: center !important;
+        width: 100% !important;
+        word-break: break-word !important;
+    }
 }
