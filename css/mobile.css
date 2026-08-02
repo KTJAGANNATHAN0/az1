@@ -532,3 +532,133 @@ body {
     position: relative !important;
     z-index: 2 !important;
 }
+
+/* ==========================================================================
+   Mobile Scrolling Timeline for OUR PILLARS (Methodology Section)
+   ========================================================================== */
+@media screen and (max-width: 991px) {
+    /* 1. Reset approach circle wrapper and hide only the background decorative rings */
+    .home_approach-circle {
+        display: block !important;
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        border: none !important;
+        background: transparent !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .home_approach-media-wr {
+        display: none !important;
+    }
+
+    /* 2. Position the cards container to hold the timeline track */
+    .home_approach-content-wr {
+        position: relative !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 3.5rem !important; /* Vertical gap between cards */
+        padding-left: 60px !important; /* Left space for the timeline line */
+        max-width: 600px !important;
+        margin: 2rem auto 0 auto !important;
+        height: auto !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+    }
+
+    /* 3. The dark background track line */
+    .home_approach-content-wr::before {
+        content: '';
+        position: absolute;
+        left: 19px;
+        top: 20px;
+        bottom: 20px;
+        width: 2px;
+        background: #1B323B; /* Theme dim color */
+        border-radius: 1px;
+        z-index: 1;
+    }
+
+    /* 4. The bright glowing line that grows on scroll */
+    .timeline-progress-fill {
+        position: absolute;
+        left: 19px;
+        top: 20px;
+        width: 2px;
+        height: 0%; /* Controlled dynamically by JavaScript */
+        background: linear-gradient(to bottom, #56D2EC, #2fa8c4);
+        box-shadow: 0 0 10px rgba(86, 210, 236, 0.6);
+        border-radius: 1px;
+        z-index: 2;
+        transition: height 0.1s linear;
+    }
+
+    /* 5. Style the cards/items as timeline rows */
+    .home_approach-item {
+        position: relative !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        justify-content: flex-start !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        transform: none !important;
+        opacity: 0.3; /* Faded by default */
+        transition: opacity 0.5s ease;
+    }
+
+    /* Faded-in active state when scrolled into focus */
+    .home_approach-item.in-view {
+        opacity: 1;
+    }
+
+    /* 6. Convert the existing Webflow numbers into timeline circles */
+    .home_approach-number {
+        position: absolute !important;
+        left: -60px !important; /* Centers it exactly over the vertical line */
+        top: 0 !important;
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 50% !important;
+        background: #0a1216 !important;
+        border: 1.5px solid #1B323B !important;
+        color: #1B323B !important;
+        
+        /* Reset Webflow's gradient text clipping */
+        -webkit-text-fill-color: #1B323B !important;
+        -webkit-background-clip: border-box !important;
+        background-clip: border-box !important;
+        background-image: none !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        font-family: monospace;
+        font-size: 0.85rem !important;
+        font-weight: 700 !important;
+        z-index: 3 !important;
+        margin: 0 !important;
+        transform: none !important;
+        transition: all 0.4s ease !important;
+    }
+
+    /* Circle active state when progress passes over it */
+    .home_approach-item.in-view .home_approach-number {
+        color: #56D2EC !important;
+        -webkit-text-fill-color: #56D2EC !important;
+        border-color: #56D2EC !important;
+        box-shadow: 0 0 16px 2px rgba(86, 210, 236, 0.35) !important;
+        transform: scale(1.08) !important;
+    }
+
+    /* Indent text elements */
+    .home_approach-item-txt-wr {
+        padding-left: 10px !important;
+    }
+}

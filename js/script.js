@@ -370,3 +370,50 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 })();
+
+/* Mobile Timeline Progress Tracker for Methodology Section */
+document.addEventListener('DOMContentLoaded', () => {
+    const track = document.querySelector('.home_approach-content-wr');
+    if (track) {
+        const initTimeline = () => {
+            if (window.innerWidth <= 991) {
+                // Check if progress fill already exists
+                let fill = track.querySelector('.timeline-progress-fill');
+                if (!fill) {
+                    fill = document.createElement('div');
+                    fill.className = 'timeline-progress-fill';
+                    track.appendChild(fill);
+                }
+                
+                const items = document.querySelectorAll('.home_approach-item');
+                
+                const updateTimeline = () => {
+                    const rect = track.getBoundingClientRect();
+                    const vh = window.innerHeight;
+                    const totalHeight = rect.height;
+                    
+                    // Ratio relative to vertical center of screen
+                    const scrolled = (vh * 0.5) - rect.top;
+                    const pct = Math.min(1, Math.max(0, totalHeight > 0 ? scrolled / totalHeight : 0));
+                    fill.style.height = (pct * 100) + '%';
+                    
+                    items.forEach(item => {
+                        const itemRect = item.getBoundingClientRect();
+                        if (itemRect.top < vh * 0.55) {
+                            item.classList.add('in-view');
+                        } else {
+                            item.classList.remove('in-view');
+                        }
+                    });
+                };
+                
+                window.addEventListener('scroll', updateTimeline, { passive: true });
+                window.addEventListener('resize', updateTimeline);
+                updateTimeline();
+            }
+        };
+
+        initTimeline();
+        window.addEventListener('resize', initTimeline);
+    }
+});
