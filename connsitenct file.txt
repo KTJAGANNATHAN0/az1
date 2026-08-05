@@ -1,0 +1,429 @@
+================================================================================
+ARCHZEN DESIGN SYSTEM & STYLE CONSISTENCY REFERENCE
+================================================================================
+
+1. FONT FAMILIES USED ACROSS THE WEBSITE
+--------------------------------------------------------------------------------
+The website utilizes a clean, tech-focused typography scheme. Below are the registered font families:
+  - monospace
+  - Geist, Inter, sans-serif
+  - Robotomono, monospace
+  - inherit
+  - Inter, sans-serif
+  - Geist, sans-serif
+  - sans-serif
+  - webflow-icons
+  - webflow-icons!important
+  - Arial,sans-serif
+  - unset
+  - serif
+  - Helvetica Neue,Helvetica,Ubuntu,Segoe UI,Verdana,sans-serif
+  - Poppins
+  - Robotomono
+  - Poppins,Arial,sans-serif
+  - Robotomono,Arial,sans-serif
+  - Inter,
+
+Key Font Roles:
+  - System Theme / Headings: Outfit, Inter, sans-serif
+  - Monospace Elements / Technical Accents: 'Robotomono', monospace (used on taglines, code-like structures, indicators)
+  - Base Layout / Fallback: System UI fonts (sans-serif)
+
+2. CORE DESIGN SYSTEM COLOR PALETTE (CSS VARIABLES)
+--------------------------------------------------------------------------------
+These CSS variables establish the unified look and feel for the dark cyber theme:
+  - --button-background: #fff
+  - --button-shadow: rgba(34, 155, 241, 0.3)
+  - --button-shine-left: rgba(248, 138, 10, 0.5)
+  - --button-shine-right: rgba(34, 155, 241, 0.65)
+  - --button-glow-start: #e89f00
+  - --button-glow-end: #009FFD
+  - --button-glow-opacity: 0
+  - --button-glow-duration: .25s
+  - --bg-0: #05090b
+  - --bg-1: #0a1216
+  - --line-dim: #1B323B
+  - --line-fill: #112028
+  - --line-bright: #56D2EC
+  - --line-bright-soft: #9be8f4
+  - --text-heading: #eef4f5
+  - --text-gray: #8a9aa0
+  - --badge-text: #cfe3e6
+  - --nb-bg: #13252d
+  - --nb-text: #ffffff
+  - --nb-muted: #a3b3bc
+  - --nb-orange: #f48d16
+  - --nb-border: #111111
+  - --nb-card-bg: #1B323B
+  - --bg: #05080C
+  - --card-bg: #0b1116
+  - --card-bg-active: linear-gradient(155deg, #101a20, #142229)
+  - --border: rgba(60, 130, 140, 0.28)
+  - --border-active: rgba(120, 220, 235, 0.55)
+  - --accent: #1B323B
+  - --cyan: #5fe0e8
+  - --text-hi: #f4f7f8
+  - --text-body: #d7e2e4
+  - --text-lo: #8fa3a8
+  - --ease-hover: 350ms cubic-bezier(0.16, 1, 0.3, 1)
+  - --large: after{border-width:5px
+  - --vertical: after{border-width:4px
+  - --black: #040410
+  - --white: white
+  - --grey: #636363
+  - --transparent: transparent
+  - --link-color: #cc7b1d
+  - --primary: #229bf1
+  - --black-gray: #41434d
+  - --blue-active: #229bf1
+  - --tertiary: #ff4040
+  - --light-grey: #bababa
+  - --grey-blue: #a3a3bb
+  - --white-bg: #f6f6f6
+  - --success: #25ac1c
+
+Color Roles:
+  - Base Background: --bg (#05080C)
+  - Card/Module Backgrounds: --card-bg (#0b1116)
+  - Hover States & Links: --link-color (#cc7b1d), --primary (#229bf1)
+  - Primary Highlight/Ambient Glows: --cyan (#5fe0e8), --line-bright (#56D2EC)
+  - Neutral UI Lines: --border (rgba(60, 130, 140, 0.28)), --line-dim (#1B323B)
+  - Text Colors: 
+      * High Contrast: --text-hi (#f4f7f8), --text-heading (#eef4f5)
+      * Body/Paragraphs: --text-body (#d7e2e4)
+      * Low Contrast: --text-lo (#8fa3a8), --text-gray (#8a9aa0)
+
+3. ALL COLOR CODES DISCOVERED (HEX / RGBA)
+--------------------------------------------------------------------------------
+Here is a comprehensive list of all raw color codes detected in style rules and markup:
+  - #000
+  - #0000
+  - #0000000d
+  - #0000001a
+  - #000000e6
+  - #0006
+  - #0060ff
+  - #0082f3
+  - #009ffd
+  - #020208
+  - #03030f
+  - #037bcf
+  - #040410
+  - #04041000
+  - #04041080
+  - #040410cc
+  - #040410e6
+  - #040709
+  - #043d6833
+  - #04bee0
+  - #050709
+  - #05080c
+  - #05090b
+  - #0a0d10
+  - #0a1216
+  - #0a141b
+  - #0b1115
+  - #0b1116
+  - #0c0d18
+  - #0e1c21
+  - #101a20
+  - #111111
+  - #11181c
+  - #112028
+  - #13252d
+  - #142229
+  - #151521
+  - #176aa2
+  - #182c33
+  - #1b323b
+  - #1d283f
+  - #1d2a41
+  - #1e1e33
+  - #1f3a44
+  - #222
+  - #2226
+  - #229bf1
+  - #232a45
+  - #232b3f
+  - #25ac1c
+  - #27343b
+  - #2895f7
+  - #29cfff
+  - #2c4750
+  - #2c505c
+  - #2d40ea
+  - #2d40ea1a
+  - #2f2f2f
+  - #2f5c68
+  - #2f8f97
+  - #2fa8c4
+  - #2fe0ff
+  - #326fcb
+  - #326fcb1f
+  - #326fcb3d
+  - #333
+  - #3336
+  - #34d8ff
+  - #35545f
+  - #3898ec
+  - #3a5a66
+  - #3a6b78
+  - #3b4448
+  - #3d90de
+  - #41434d
+  - #475676
+  - #4cf7d5
+  - #4f515f
+  - #4fc8e8
+  - #50585c
+  - #52b7ff
+  - #56d2ec
+  - #5d6c7b
+  - #5fe0e8
+  - #636363
+  - #652009
+  - #656c4b
+  - #6c7a89
+  - #758696
+  - #75869600
+  - #79ffd8
+  - #7fb1eb
+  - #89c3ea
+  - #89c6ea
+  - #8a9aa0
+  - #8c8d94
+  - #8fa3a8
+  - #8fe0f0
+  - #909090
+  - #93d4ff
+  - #989898
+  - #999
+  - #9aa8ac
+  - #9be8f4
+  - #a3a3bb
+  - #a3b3bc
+  - #aaadb0
+  - #b3c5cf
+  - #b3dfff
+  - #b3dfff00
+  - #b3dfff80
+  - #b4b59b
+  - #bababa
+  - #be4aa5
+  - #c1e5ff
+  - #c1e5ff00
+  - #c8c8c8
+  - #cbd5e1
+  - #cc7b1d
+  - #cc7b1d66
+  - #ccc
+  - #cccccc
+  - #cce1ff00
+  - #cfe3e6
+  - #d7e2e4
+  - #ddd
+  - #e2e2e2
+  - #e2e8f0
+  - #e89f00
+  - #e9ecf0
+  - #ea384c
+  - #eafcff
+  - #ecc68e
+  - #eee
+  - #eef4f5
+  - #f3f3f3
+  - #f48d16
+  - #f4f7f8
+  - #f5f5f5
+  - #f6f6f6
+  - #f6f6f600
+  - #fafafa
+  - #ff0
+  - #ff3333
+  - #ff4040
+  - #ffdede
+  - #fff
+  - #fff0
+  - #fff6
+  - #ffffff
+  - #ffffff4d
+  - rgba(0, 0, 0, 0)
+  - rgba(0, 0, 0, 0.15)
+  - rgba(0, 0, 0, 0.3)
+  - rgba(0, 0, 0, 0.35)
+  - rgba(0, 0, 0, 0.45)
+  - rgba(0, 0, 0, 0.5)
+  - rgba(0, 180, 255, 0.25)
+  - rgba(0,0,0,0.35)
+  - rgba(10, 17, 22, .98)
+  - rgba(10, 17, 22, 0.98)
+  - rgba(107, 148, 152, 0.18)
+  - rgba(120, 220, 235, 0.55)
+  - rgba(121, 255, 216, 0.4)
+  - rgba(143, 224, 240, 0.7)
+  - rgba(143, 224, 240, 0.9)
+  - rgba(17, 35, 41, 0.8)
+  - rgba(18, 34, 42, .96)
+  - rgba(18, 34, 42, 0.96)
+  - rgba(20, 40, 46, 0.4)
+  - rgba(248, 138, 10, 0.5)
+  - rgba(255, 255, 255, .015)
+  - rgba(255, 255, 255, 0.01)
+  - rgba(255, 255, 255, 0.02)
+  - rgba(255, 255, 255, 0.03)
+  - rgba(255, 255, 255, 0.04)
+  - rgba(255, 255, 255, 0.05)
+  - rgba(255, 255, 255, 0.06)
+  - rgba(255, 255, 255, 0.08)
+  - rgba(255, 255, 255, 0.1)
+  - rgba(255, 255, 255, 0.12)
+  - rgba(255, 255, 255, 0.15)
+  - rgba(27, 50, 59, 0.75)
+  - rgba(27,50,59,0.9)
+  - rgba(3, 123, 207, 0.02)
+  - rgba(3, 123, 207, 0.05)
+  - rgba(3, 123, 207, 0.08)
+  - rgba(3, 123, 207, 0.1)
+  - rgba(3, 123, 207, 0.15)
+  - rgba(3, 123, 207, 0.2)
+  - rgba(3, 123, 207, 0.25)
+  - rgba(3, 123, 207, 0.35)
+  - rgba(3, 123, 207, 0.4)
+  - rgba(30, 60, 68, 0.9)
+  - rgba(34, 155, 241, 0.3)
+  - rgba(34, 155, 241, 0.65)
+  - rgba(35,71,80,0.8)
+  - rgba(4, 190, 160, 0.02)
+  - rgba(4, 190, 160, 0.03)
+  - rgba(4, 190, 160, 0.1)
+  - rgba(4, 190, 160, 0.15)
+  - rgba(4, 190, 160, 0.25)
+  - rgba(4, 190, 224, 0.02)
+  - rgba(4, 190, 224, 0.1)
+  - rgba(4, 190, 224, 0.18)
+  - rgba(4, 190, 224, 0.2)
+  - rgba(4, 190, 224, 0.28)
+  - rgba(4, 190, 224, 0.3)
+  - rgba(4, 190, 224, 0.4)
+  - rgba(4, 190, 224, 0.45)
+  - rgba(4, 4, 16, 0.00)
+  - rgba(4, 4, 16, 0.5)
+  - rgba(4, 4, 16, 0.6)
+  - rgba(4, 4, 16, 0.7)
+  - rgba(4, 4, 16, 0.75)
+  - rgba(4, 4, 16, 0.9)
+  - rgba(45, 190, 160, 0.05)
+  - rgba(47, 224, 255, 0.2)
+  - rgba(47, 224, 255, 0.3)
+  - rgba(5, 8, 12, 0.55)
+  - rgba(5,9,11,0.55)
+  - rgba(5,9,11,0.82)
+  - rgba(5,9,11,0.88)
+  - rgba(60, 130, 140, 0.28)
+  - rgba(79, 200, 232, 0.08)
+  - rgba(79, 200, 232, 0.18)
+  - rgba(79, 200, 232, 0.55)
+  - rgba(79, 200, 232, 0.8)
+  - rgba(86, 210, 236, .04)
+  - rgba(86, 210, 236, .08)
+  - rgba(86, 210, 236, .18)
+  - rgba(86, 210, 236, .25)
+  - rgba(86, 210, 236, .45)
+  - rgba(86, 210, 236, 0.15)
+  - rgba(86, 210, 236, 0.22)
+  - rgba(86, 210, 236, 0.35)
+  - rgba(86, 210, 236, 0.6)
+  - rgba(86,210,236,0.28)
+  - rgba(86,210,236,0.5)
+  - rgba(95, 224, 232, 0.2)
+
+4. FONT SIZES DISCOVERED (DEFINED IN STYLE STACK)
+--------------------------------------------------------------------------------
+Below are the font-size values declared across components and layout utilities:
+  - .2rem
+  - .63rem
+  - .69rem
+  - .75rem
+  - .875rem
+  - .88rem
+  - 0
+  - 0.6rem
+  - 0.75rem
+  - 0.85rem
+  - 0.85rem !important
+  - 0.88rem
+  - 0.8rem
+  - 0.95rem
+  - 0.95rem !important
+  - 0.9rem
+  - 1.05rem
+  - 1.05rem !important
+  - 1.13rem
+  - 1.15rem
+  - 1.1rem
+  - 1.1rem !important
+  - 1.25rem
+  - 1.31rem
+  - 1.35rem
+  - 1.3rem
+  - 1.45rem
+  - 1.5rem
+  - 1.63rem
+  - 1.65rem
+  - 1.75rem
+  - 1.8rem
+  - 10px
+  - 12px
+  - 12px!important
+  - 13px
+  - 14px
+  - 15px
+  - 16px
+  - 17px
+  - 18px
+  - 1em
+  - 1rem
+  - 2.25rem
+  - 2.2rem
+  - 2.38rem
+  - 2.5rem
+  - 2.75rem
+  - 24px
+  - 2em
+  - 2rem
+  - 3.5rem
+  - 3.75rem
+  - 30px
+  - 32px
+  - 36px
+  - 38px
+  - 3rem
+  - 40px
+  - 46px
+  - 48px
+  - 4rem
+  - 6rem
+  - 75%
+  - 80%
+  - calc(16*(100vw / 1600))
+  - calc(16*(100vw / 360))
+  - clamp(.58rem, 1.6vw, .68rem)
+  - clamp(0.9rem, 2.2vw, 1.1rem)
+  - clamp(1.6rem, 6vw, 2.25rem) !important
+  - clamp(1.8rem, 7vw, 2.3rem) !important
+  - clamp(10.5px, 1.4vw, 13px)
+  - clamp(12.5px, 1.6vw, 16.5px)
+  - clamp(13px, 1.75vw, 16.5px)
+  - clamp(14px, 2.5vw, 22px)
+  - clamp(4rem, 15.5vw, 15rem)
+  - inherit
+  - unset
+
+Key Spacing & Typography Mappings:
+  - Hero large titles: 4rem (e.g. .about-title-large, .solutions-title-large)
+  - Section Headings: 2.5rem, 2rem
+  - Text Content & Lists: 1rem, 1.1rem, 1.2rem
+  - Taglines / Labels: 0.8rem, 0.85rem, 0.88rem
+  - Desktop standard fonts: clamp(13px, 1.75vw, 16.5px)
+
+================================================================================
