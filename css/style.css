@@ -717,7 +717,7 @@ html {
 
     font-size: 1.05rem; line-height: 1.5;
 
-    color: var(--text-gray);
+    color: #eef5f6;
 }
 
 .feature-list li::before {
