@@ -1448,12 +1448,18 @@ html {
 /* --- Extracted Style Block #2 --- */
 .home_services-grid {
                                                 display: grid !important;
-                                                grid-template-columns: repeat(3, 1fr) !important;
+                                                grid-template-columns: repeat(4, 1fr) !important;
                                                 gap: 1.5rem !important;
                                                 width: 100% !important;
                                             }
 
-                                            @media screen and (max-width: 991px) {
+                                            @media screen and (max-width: 1200px) {
+                                                .home_services-grid {
+                                                    grid-template-columns: repeat(2, 1fr) !important;
+                                                }
+                                            }
+
+                                            @media screen and (max-width: 768px) {
                                                 .home_services-grid {
                                                     grid-template-columns: 1fr !important;
                                                 }
