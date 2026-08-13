@@ -472,7 +472,7 @@ html {
 ========================================================== */
 
 :root {
-    --bg-0: #05090b;
+    --bg-0: #05080c;
     --bg-1: #0a1216;
     --line-dim: #1B323B;
     --line-fill: #112028;
@@ -887,7 +887,7 @@ html {
 .card-icon-top-right {
     width: 32px;
     height: 32px;
-    color: #04BEE0;
+    color: #56D2EC;
     filter: drop-shadow(0 0 4px rgba(4, 190, 224, 0.3));
     display: flex;
     align-items: center;
@@ -897,7 +897,7 @@ html {
 
 .card:hover .card-icon-top-right {
     transform: scale(1.1);
-    color: #5FE0E8;
+    color: #56D2EC;
 }
 
 .card-icon-top-right svg {
@@ -917,7 +917,7 @@ html {
 }
 
 .card:hover .card-title-new {
-    color: #04BEE0;
+    color: #56D2EC;
 }
 
 .card-footer-new {
@@ -1468,7 +1468,7 @@ html {
                             --border: rgba(60, 130, 140, 0.28);
                             --border-active: rgba(120, 220, 235, 0.55);
                             --accent: #1B323B;
-                            --cyan: #5fe0e8;
+                            --cyan: #56D2EC;
                             --text-hi: #f4f7f8;
                             --text-body: #d7e2e4;
                             --text-lo: #8fa3a8;
@@ -1583,7 +1583,7 @@ html {
                         }
 
                         .t-card.active .t-card-frame .t-accent-top {
-                            stroke: #04BEE0;
+                            stroke: #56D2EC;
                         }
 
                         .t-header-name {

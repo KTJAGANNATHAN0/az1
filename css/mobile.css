@@ -101,7 +101,7 @@ body {
     width: 80%;
     max-width: 400px;
     height: 100vh;
-    background-color: #040410;
+    background-color: #05080c;
     border-left: 1px solid rgba(255, 255, 255, 0.05);
     z-index: 10001;
     padding: 6rem 2.5rem 3rem 2.5rem;
@@ -144,7 +144,7 @@ body {
 
 .mobile-nav-link:hover,
 .mobile-nav-link.is-active {
-    color: #04BEE0;
+    color: #56D2EC;
 }
 
 /* Submenu container and slide expand animations */
@@ -189,7 +189,7 @@ body {
     display: inline-block;
     transition: transform 0.3s ease;
     font-size: 0.9rem;
-    color: #04BEE0;
+    color: #56D2EC;
     pointer-events: none;
 }
 
@@ -323,7 +323,7 @@ body {
     overflow: hidden !important;
     pointer-events: none !important;
     opacity: 0.38 !important; /* Blends nicely, keeps text highly readable */
-    background-color: #05090b !important;
+    background-color: #05080c !important;
 }
 
 .blob {

@@ -22,7 +22,10 @@
         .services-hero-section {
             padding: 10rem 2.5rem 4rem 2.5rem;
             position: relative;
-            background: radial-gradient(circle at 50% 20%, rgba(3, 123, 207, 0.08) 0%, transparent 60%);
+            background-image: radial-gradient(circle at 50% 20%, rgba(4, 190, 224, 0.08) 0%, rgba(2, 2, 8, 0.9) 100%), url('resources/Screenshot 2026-07-23 221728.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             text-align: center;
         }
 
@@ -39,10 +42,10 @@
 
         .services-subtitle {
             font-family: 'Robotomono', monospace;
-            font-size: 1rem;
+            font-size: 1.3rem;
             text-transform: uppercase;
             letter-spacing: 0.15em;
-            color: #04BEE0;
+            color: #56D2EC;
             margin-bottom: 2.5rem;
         }
 
@@ -72,10 +75,10 @@
 
         .category-tag {
             font-family: 'Robotomono', monospace;
-            font-size: 0.88rem;
+            font-size: 1.1rem;
             text-transform: uppercase;
             letter-spacing: 0.15em;
-            color: #04BEE0;
+            color: #56D2EC;
             margin-bottom: 1rem;
         }
 
@@ -173,7 +176,7 @@
         }
 
         .service-card:hover .service-card-frame .frame-border {
-            stroke: #04BEE0;
+            stroke: #56D2EC;
         }
 
         .service-card:hover .service-card-frame .stripe-bottom-right-accent {
@@ -213,9 +216,11 @@
 
         .service-badge {
             position: absolute;
-            left: 33.3%;
+            left: 50%;
+            transform: translateX(-50%);
             top: 2%;
-            width: 33.3%;
+            width: auto;
+            white-space: nowrap;
             height: 6%;
             display: flex;
             align-items: center;
@@ -240,7 +245,7 @@
             align-items: center;
             justify-content: center;
             margin-bottom: 1.5rem;
-            color: #04BEE0;
+            color: #56D2EC;
         }
 
         .service-title {
@@ -328,8 +333,8 @@
         }
 
         .btn-secondary-outline:hover {
-            border-color: #04BEE0;
-            color: #04BEE0;
+            border-color: #56D2EC;
+            color: #56D2EC;
             transform: translateY(-2px);
             box-shadow: 0 10px 25px rgba(4, 190, 160, 0.15);
         }
@@ -373,8 +378,6 @@
                         <div class="brand" style="display: flex; align-items: center; gap: 0.5rem;">
                             <a href="index.html"
                                 style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem;">
-                                <img src="resources/A Icon 1.png" alt="ArchZen Logo"
-                                    style="height: 2.2rem; width: auto;" />
                                 <img src="resources/archzen_logo_text_white.png" alt="ArchZen" class="nav-logo-text" />
                             </a>
                         </div>
@@ -517,14 +520,14 @@
                 </pattern>
                 <pattern id="solStripeAccent" width="9" height="9" patternTransform="rotate(45)" patternUnits="userSpaceOnUse">
                   <rect width="9" height="9" fill="transparent"/>
-                  <rect width="4" height="9" fill="#04BEE0"/>
+                  <rect width="4" height="9" fill="#56D2EC"/>
                 </pattern>
               </defs>
             </svg>
             <div class="services-grid">
                         <!-- Email & Cloud Security -->
                         <div class="service-card">
-                            <span class="service-badge">CYBER</span>
+                            <span class="service-badge">PROTECT</span>
                             <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
                                 <g clip-path="url(#solCardClip)">
                                     <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
@@ -564,7 +567,7 @@
 
                         <!-- Firewall Security -->
                         <div class="service-card">
-                            <span class="service-badge">CYBER</span>
+                            <span class="service-badge">PROTECT</span>
                             <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
                                 <g clip-path="url(#solCardClip)">
                                     <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
@@ -602,7 +605,7 @@
 
                         <!-- End Point Protection & Response -->
                         <div class="service-card">
-                            <span class="service-badge">CYBER</span>
+                            <span class="service-badge">PROTECT</span>
                             <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
                                 <g clip-path="url(#solCardClip)">
                                     <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
@@ -640,7 +643,7 @@
 
                         <!-- Employee Awareness Training -->
                         <div class="service-card">
-                            <span class="service-badge">CYBER</span>
+                            <span class="service-badge">PROTECT</span>
                             <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
                                 <g clip-path="url(#solCardClip)">
                                     <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
@@ -678,7 +681,7 @@
 
                         <!-- Conditional Access Policy Management -->
                         <div class="service-card">
-                            <span class="service-badge">CYBER</span>
+                            <span class="service-badge">PROTECT</span>
                             <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
                                 <g clip-path="url(#solCardClip)">
                                     <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
@@ -715,7 +718,7 @@
 
                         <!-- Penetration Testing -->
                         <div class="service-card">
-                            <span class="service-badge">CYBER</span>
+                            <span class="service-badge">PROTECT</span>
                             <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
                                 <g clip-path="url(#solCardClip)">
                                     <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
@@ -770,7 +773,7 @@
                     <div class="services-grid">
                         <!-- Helpdesk & Remote Support -->
                         <div class="service-card">
-                            <span class="service-badge">SUPP</span>
+                            <span class="service-badge">SUPPORT</span>
                             <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
                                 <g clip-path="url(#solCardClip)">
                                     <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
@@ -804,7 +807,7 @@
 
                         <!-- Server & Infrastructure Management -->
                         <div class="service-card">
-                            <span class="service-badge">SUPP</span>
+                            <span class="service-badge">SUPPORT</span>
                             <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
                                 <g clip-path="url(#solCardClip)">
                                     <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
@@ -841,7 +844,7 @@
 
                         <!-- Onsite Support & Emergency Dispatch -->
                         <div class="service-card">
-                            <span class="service-badge">SUPP</span>
+                            <span class="service-badge">SUPPORT</span>
                             <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
                                 <g clip-path="url(#solCardClip)">
                                     <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
@@ -876,7 +879,7 @@
 
                         <!-- Device Provisioning & Lifecycle -->
                         <div class="service-card">
-                            <span class="service-badge">SUPP</span>
+                            <span class="service-badge">SUPPORT</span>
                             <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
                                 <g clip-path="url(#solCardClip)">
                                     <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
@@ -912,7 +915,7 @@
 
                         <!-- Data Backup & Disaster Recovery -->
                         <div class="service-card">
-                            <span class="service-badge">SUPP</span>
+                            <span class="service-badge">SUPPORT</span>
                             <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
                                 <g clip-path="url(#solCardClip)">
                                     <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
@@ -948,7 +951,7 @@
 
                         <!-- Network & WiFi Management -->
                         <div class="service-card">
-                            <span class="service-badge">SUPP</span>
+                            <span class="service-badge">SUPPORT</span>
                             <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
                                 <g clip-path="url(#solCardClip)">
                                     <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
@@ -1001,7 +1004,7 @@
                     <div class="services-grid">
                         <!-- Microsoft Azure -->
                         <div class="service-card">
-                            <span class="service-badge">CLOUD</span>
+                            <span class="service-badge">SCALE</span>
                             <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
                                 <g clip-path="url(#solCardClip)">
                                     <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
@@ -1039,7 +1042,7 @@
 
                         <!-- Implementation & Migration -->
                         <div class="service-card">
-                            <span class="service-badge">CLOUD</span>
+                            <span class="service-badge">SCALE</span>
                             <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
                                 <g clip-path="url(#solCardClip)">
                                     <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
@@ -1079,7 +1082,7 @@
 
                         <!-- Email Management -->
                         <div class="service-card">
-                            <span class="service-badge">CLOUD</span>
+                            <span class="service-badge">SCALE</span>
                             <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
                                 <g clip-path="url(#solCardClip)">
                                     <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
@@ -1118,7 +1121,7 @@
 
                         <!-- SharePoint -->
                         <div class="service-card">
-                            <span class="service-badge">CLOUD</span>
+                            <span class="service-badge">SCALE</span>
                             <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
                                 <g clip-path="url(#solCardClip)">
                                     <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
@@ -1156,7 +1159,7 @@
 
                         <!-- Microsoft Licensing -->
                         <div class="service-card">
-                            <span class="service-badge">CLOUD</span>
+                            <span class="service-badge">SCALE</span>
                             <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
                                 <g clip-path="url(#solCardClip)">
                                     <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
@@ -1195,7 +1198,7 @@
 
                         <!-- Website Hosting & Maintenance -->
                         <div class="service-card">
-                            <span class="service-badge">CLOUD</span>
+                            <span class="service-badge">SCALE</span>
                             <svg class="service-card-frame" viewBox="0 0 460 480" fill="none" aria-hidden="true">
                                 <g clip-path="url(#solCardClip)">
                                     <path d="M22,0 H460 V432 L412,480 H20 L0,460 V22 Z" class="frame-bg" />
@@ -1234,67 +1237,212 @@
                     </div>
                 </div>
             </section>
-
-            <!-- Call to Action Section -->
-            <section class="cta-action-section">
-                <div class="container cta-action-container">
-                    <p class="section-tag" style="color: #04BEE0;">READY TO KICKSTART?</p>
-                    <h2 class="section-heading-medium" style="margin-bottom: 1.5rem;">Let's Build Something Secure
-                        Together</h2>
-                    <div style="font-size: 1.1rem; color: #CCCCCC; max-width: 600px; margin: 0 auto;">
-                        Schedule a strategy call with our certified cybersecurity and managed IT consultants today.
-                    </div>
-                    <div class="cta-btn-group">
-                        <a href="contact.html" class="custom-cta-button btn-primary-blue">Book a consultation</a>
-                        <a href="contact.html" class="custom-cta-button btn-secondary-outline">Consult Us</a>
-                    </div>
-                </div>
-            </section>
         </main>
 
         <!-- Footer (matches index.html exactly) -->
-        <div class="footer-bottom"
-            style="padding: 4rem 2.5rem; background: #020208; border-top: 1px solid rgba(255, 255, 255, 0.03);">
-            <div class="container" style="display: flex; flex-direction: column; gap: 3rem;">
-                <div
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 2rem;">
-                    <div class="footer-logo-wr" style="display: flex; align-items: center; gap: 0.5rem;">
-                        <img src="resources/A Icon 1.png" alt="ArchZen Logo" style="height: 2.2rem; width: auto;" />
-                        <img src="resources/archzen_logo_text_white.png" alt="ArchZen" class="nav-logo-text" />
+        
+        <section class="section is-footer">
+        <div class="section-padding">
+            <div class="container">
+                <div class="footer-wr">
+                    <div class="footer-cta-wr">
+                        <div class="anim_appear-on-scroll">
+                            <div class="cta-wr">
+                                <div class="cta-stroke">
+                                    <div class="cta-content is-footer">
+                                        <img src="resources/Screenshot%202026-07-23%20221748.png" loading="lazy" alt=""
+                                            class="cta-content-bg" /><img
+                                            src="resources/Screenshot%202026-07-23%20221748.png" loading="lazy" alt=""
+                                            class="cta-content-bg is-mob" />
+                                        <h2 class="heading-style-48">Move forward with confidence</h2>
+                                        <div class="spacer-medium-30 is-mob-30"></div>
+                                        <div class="max-width-700">
+                                            <div class="text-font-rm text-color-light-grey">
+                                                <p class="text-size-regular-16">Don’t let compliance delays hold
+                                                    you back from growing your business. Get in touch to talk it
+                                                    over with a ArchZen expert.</p>
+                                            </div>
+                                        </div>
+                                        <div class="spacer-medium-36 is-mob-52"></div><a href="contact.html"
+                                            class="button-glow w-inline-block">
+                                            <div class="button-glow-text-wr">
+                                                <div>BOOK A DISCOVERY CALL</div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="cta-back-bg"></div>
+                                    <div class="cta-back-bg-mob"></div>
+                                </div>
+                                <div class="cta-logo-wr">
+                                    <div class="cta-logo-img"
+                                        style="display: flex; align-items: center; justify-content: center; width: 6.4rem; height: 6.4rem; margin-top: -3.2rem; pointer-events: auto;">
+                                        <img src="resources/A Icon 1.png" style="width: 4.6rem; height: auto;"
+                                            alt="ArchZen Logo" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
-                        <a href="services.html" class="w--current"
-                            style="color: #FFFFFF; font-size: 0.9rem; text-decoration: none; font-weight: bold;">Services</a>
-                        <a href="solutions.html"
-                            style="color: #BABABA; font-size: 0.9rem; text-decoration: none;">Solutions</a>
-                        <a href="industries.html"
-                            style="color: #BABABA; font-size: 0.9rem; text-decoration: none;">Industries</a>
-                        <a href="compliance-privacy.html"
-                            style="color: #BABABA; font-size: 0.9rem; text-decoration: none;">Compliance &amp;
-                            Privacy</a>
-                        <a href="about.html" style="color: #BABABA; font-size: 0.9rem; text-decoration: none;">About
-                            Us</a>
+                    <div class="footer-content-wr">
+                        <div class="footer_item-wr">
+                            <div data-w-id="59a0f660-a3bc-1ff9-50ca-423c1f21a528" class="footer-item-title-wr">
+                                <p>Solutions</p><img
+                                    src="resources/67d3f3b16f6c5be986785d95_Footer Toggle Container.svg" loading="lazy"
+                                    alt="" class="footer_icon-img" />
+                            </div>
+                            <div class="footer-item-content">
+                                <div class="footer-item-content-wr">
+                                    <div class="footer-links-wr with-gap">
+
+                                        <a href="solutions.html#internet-voip" class="footer-link">INTERNET &amp; VOIP</a>
+                                        <a href="solutions.html#it-consulting" class="footer-link">IT CONSULTING</a>
+                                        <a href="solutions.html#operational-resilience" class="footer-link">OPERATIONAL RESILIENCE</a>
+                                        <a href="solutions.html#cx-test-automation" class="footer-link">CX TEST AUTOMATION</a>
+                                        <a href="solutions.html#conversational-ai" class="footer-link">CONVERSATIONAL AI</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer_item-wr is-2">
+                            <div data-w-id="59a0f660-a3bc-1ff9-50ca-423c1f21a549" class="footer-item-title-wr">
+                                <p>Technical Services</p><img
+                                    src="resources/67d3f3b16f6c5be986785d95_Footer Toggle Container.svg" loading="lazy"
+                                    alt="" class="footer_icon-img" />
+                            </div>
+                            <div class="footer-item-content">
+                                <div class="footer-item-content-wr">
+                                    <div class="footer-links-wr with-gap"><a href="index.html#services"
+                                            class="footer-link">PENETRATION TESTING</a><a href="index.html#services"
+                                            class="footer-link">CLOUD SECURITY ASSESSMENT</a><a href="index.html#services"
+                                            class="footer-link">SECURITY ASSESSMENT</a><a href="index.html#solutions"
+                                            class="footer-link">BUSINESS CONTINUITY &amp; DISASTER
+                                            RECOVERY</a><a href="index.html#services" class="footer-link">VULNERABILITY
+                                            SCANNING</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer_item-wr is-3">
+                            <div data-w-id="59a0f660-a3bc-1ff9-50ca-423c1f21a55b" class="footer-item-title-wr">
+                                <p>Company</p><img src="resources/67d3f3b16f6c5be986785d95_Footer Toggle Container.svg"
+                                    loading="lazy" alt="" class="footer_icon-img" />
+                            </div>
+                            <div class="footer-item-content">
+                                <div class="footer-item-content-wr">
+                                    <div class="footer-links-wr with-gap"><a href="about.html" class="footer-link">ABOUT
+                                            US</a><a href="contact.html" class="footer-link">CONTACT</a><a href="#"
+                                            class="footer-link">BLOG</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="footer_item-wr">
+                            <div data-w-id="59a0f660-a3bc-1ff9-50ca-423c1f21a56b" class="footer-item-title-wr">
+                                <p>Contact</p><img src="resources/67d3f3b16f6c5be986785d95_Footer Toggle Container.svg"
+                                    loading="lazy" alt="" class="footer_icon-img" />
+                            </div>
+                            <div class="footer-item-content">
+                                <div class="footer-item-content-wr">
+                                    <div class="footer-links-wr with-gap" style="gap: 1rem !important;"><a href="#" target="_blank"
+                                            class="footer-link"
+                                            style="display: flex; align-items: flex-start; gap: 0.75rem; line-height: 1.4; text-decoration: none;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0; margin-top: 0.2rem;"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                                            <span>Level 19, 263 William Street<br>Melbourne VIC 3000<br>Australia</span>
+                                        </a><a href="tel:0361611107" class="footer-link"
+                                            style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                                            <span>Office: +61 3 6161 1107</span>
+                                        </a><a href="tel:+61431921379" class="footer-link"
+                                            style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+                                            <span>Mobile: +61 431 921 379</span>
+                                        </a><a href="mailto:enquiries@archzen.com.au" class="footer-link"
+                                            style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none;">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink: 0;"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                                            <span>enquiries@archzen.com.au</span>
+                                        </a>
+                                        <div class="spacer-medium-10"></div>
+                                        <div
+                                            style="display: flex; gap: 0.75rem; align-items: center; justify-content: flex-start; flex-wrap: wrap;">
+                                            <a href="https://www.linkedin.com/company/archzen-pty-ltd/posts/?feedView=all"
+                                                target="_blank" class="div-link w-inline-block">
+                                                <div class="social-button">
+                                                    <div class="social-button-icon w-embed"><svg width="100%"
+                                                            height="100%" viewBox="0 0 24 24" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                                d="M6.18881 4.35225C6.18881 5.65983 5.20455 6.70613 3.62417 6.70613H3.5952C2.07356 6.70613 1.08984 5.65983 1.08984 4.35225C1.08984 3.017 2.10351 2 3.65403 2C5.20455 2 6.15939 3.017 6.18881 4.35225ZM5.88962 8.56494V22.183H1.35717V8.56494H5.88962ZM22.2349 22.183L22.2351 14.3748C22.2351 10.1919 19.999 8.24511 17.0166 8.24511C14.6101 8.24511 13.5327 9.5669 12.9312 10.4942V8.56526H8.39819C8.45793 9.84311 8.39819 22.1833 8.39819 22.1833H12.9312V14.5779C12.9312 14.1709 12.9606 13.7649 13.0804 13.4735C13.408 12.6604 14.1539 11.8185 15.406 11.8185C17.0467 11.8185 17.7027 13.0673 17.7027 14.8973V22.183H22.2349Z"
+                                                                fill="currentColor" />
+                                                        </svg></div>
+                                                </div>
+                                            </a>
+                                            <a href="https://www.instagram.com/_archzen/" target="_blank"
+                                                class="div-link w-inline-block">
+                                                <div class="social-button">
+                                                    <div class="social-button-icon w-embed"><svg width="100%"
+                                                            height="100%" viewBox="0 0 24 24" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"
+                                                                fill="currentColor" />
+                                                        </svg></div>
+                                                </div>
+                                            </a>
+                                            <a href="https://www.facebook.com/ArchzenPtyLtd" target="_blank"
+                                                class="div-link w-inline-block">
+                                                <div class="social-button">
+                                                    <div class="social-button-icon w-embed"><svg width="100%"
+                                                            height="100%" viewBox="0 0 24 24" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M18.896 2H14.85c-3.13 0-5.74 2.45-5.74 5.5v3.13H6.104c-.39 0-.71.32-.71.71v3.91c0 .39.32.71.71.71H9.11v8.83c0 .39.32.71.71.71h4.05c.39 0 .71-.32.71-.71V16H17.75c.35 0 .66-.26.7-.61l.52-3.91c.03-.23-.04-.46-.2-.62-.16-.17-.39-.26-.62-.26h-3.66V7.5c0-.62.5-1.12 1.12-1.12h3.28c.39 0 .71-.32.71-.71V2.71c0-.39-.32-.71-.71-.71z"
+                                                                fill="currentColor" />
+                                                        </svg></div>
+                                                </div>
+                                            </a>
+                                            <a href="https://www.tiktok.com/@_archzen" target="_blank"
+                                                class="div-link w-inline-block">
+                                                <div class="social-button">
+                                                    <div class="social-button-icon w-embed"><svg width="100%"
+                                                            height="100%" viewBox="0 0 24 24" fill="none"
+                                                            xmlns="http://www.w3.org/2000/svg">
+                                                            <path
+                                                                d="M12.525.02c1.31-.02 2.61-.01 3.91-.01.08 1.54.81 2.94 1.99 3.84a8.13 8.13 0 0 0 3.01 1.34v3.89c-1.24-.04-2.4-.55-3.32-1.39-.77-.7-1.32-1.63-1.57-2.66-.02-.02-.03-.02-.05-.05v9.39c.02 3.42-2.15 6.55-5.41 7.55a7.8 7.8 0 0 1-8.54-3.14 8.01 8.01 0 0 1 .49-9.52c1.61-2.15 4.39-3.28 7.07-2.73v3.98a4.01 4.01 0 0 0-3.23 1.93 4 4 0 0 0 .54 4.88c.95.89 2.37 1.13 3.56.61a4 4 0 0 0 2.29-3.64V0c-.33.02-.66.02-.97.02z"
+                                                                fill="currentColor" />
+                                                        </svg></div>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            <div
-                    style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 2rem;">
-                    <div class="text-color-light-grey" style="font-size: 0.85rem;">
-                        <p>© 2026 Archzen IT Services. all rights reserved.</p>
-                    </div>
-                    <div style="display: flex; gap: 1.5rem; align-items: center;">
-                        <a href="compliance-privacy.html#privacy-policy"
-                            style="color: #BABABA; font-size: 0.85rem; text-decoration: none;">PRIVACY POLICY</a>
-                        <span style="color: #333;">|</span>
-                        <a href="mailto:enquiries@archzen.com.au"
-                            style="color: #BABABA; font-size: 0.85rem; text-decoration: none;">enquiries@archzen.com.au</a>
+                    <div class="footer-bottom">
+                        <div class="footer-bottom-left-wr">
+                            <div class="text-color-light-grey">
+                                <p class="text-size-small-14-rm">© <span class="year">2026</span> Archzen
+                                    IT Services. all rights reserved</p>
+                            </div>
+                        </div>
+                        <div class="footer-bottom-legacy-wr"
+                            style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap; font-size: 0.8rem;">
+                            <a href="compliance-privacy.html#privacy-policy" class="footer-link"
+                                style="font-size: 0.8rem;">PRIVACY POLICY</a>
+                            <span style="color: rgba(255, 255, 255, 0.15);">|</span>
+                            <a href="compliance-privacy.html#terms-conditions" class="footer-link"
+                                style="font-size: 0.8rem;">WEBSITE TERMS &amp; CONDITIONS</a>
+                            <span style="color: rgba(255, 255, 255, 0.15);">|</span>
+                            <a href="compliance-privacy.html#ai-usage-policy" class="footer-link"
+                                style="font-size: 0.8rem;">AI USAGE POLICY</a>
+                            <span style="color: rgba(255, 255, 255, 0.15);">|</span>
+                            <a href="compliance-privacy.html#acceptable-use-policy" class="footer-link"
+                                style="font-size: 0.8rem;">ACCEPTABLE USE POLICY</a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="footer-brand-text-container">
-            <div class="footer-brand-text">ARCHZEN</div>
-        </div>
-    </div>
+    </section>
+    
 
     <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=67c995cf629758b15942fb10"
         type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
